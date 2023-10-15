@@ -1,9 +1,25 @@
+import Image from "next/image";
 import RootLayout from "../Component/RootLayout";
-
+import banner from '../images/banner/banner.jpg';
+import HeroAfter from "@/Component/HeroAfter";
+import CountAll from "@/Component/CountAll";
+import CateringServices from "@/Component/CateringServices";
 const Home = () => {
   return (
     <div>
-      <h1 className="bg-black">this home page</h1>
+      <div>
+        <Image
+  src={banner}
+  style={{ width: '100%', height: '70vh' }}
+  alt="Picture of the author"
+/>
+
+      </div>
+      <div className="max-w-7xl mx-auto">
+        <HeroAfter></HeroAfter>
+        <CountAll></CountAll>
+        <CateringServices></CateringServices>
+      </div>
     </div>
   );
 };

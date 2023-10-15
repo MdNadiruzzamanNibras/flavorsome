@@ -42,7 +42,7 @@ const RootLayout = ({ children }) => {
     <></>
   </div>
 </div>
-      <div style={{ height: '100vh' }}>{children}</div>
+      <div >{children}</div>
       <footer className="footer p-10 bg-neutral text-neutral-content">
   <nav>
     <header className="footer-title">Services</header> 
