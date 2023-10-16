@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "json-server": "json-server --watch db.json --port 5000",
     "lint": "next lint"
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "json-server": "^0.17.4",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",

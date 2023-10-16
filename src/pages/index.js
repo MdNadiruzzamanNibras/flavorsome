@@ -1,9 +1,11 @@
+import CateringServices from "@/Component/Home/CateringServices";
+import CountAll from "@/Component/Home/CountAll";
+import HeroAfter from "@/Component/Home/HeroAfter";
+import RootLayout from "@/Component/layout/RootLayout";
 import Image from "next/image";
-import RootLayout from "../Component/RootLayout";
-import banner from '../images/banner/banner.jpg';
-import HeroAfter from "@/Component/HeroAfter";
-import CountAll from "@/Component/CountAll";
-import CateringServices from "@/Component/CateringServices";
+import banner from '../images/banner/banner.jpg'
+import Menu from "@/Component/Home/Menu";
+import Master_Chef from "@/Component/Home/Master_Chef";
 const Home = () => {
   return (
     <div>
@@ -19,6 +21,8 @@ const Home = () => {
         <HeroAfter></HeroAfter>
         <CountAll></CountAll>
         <CateringServices></CateringServices>
+        <Menu></Menu>
+        <Master_Chef></Master_Chef>
       </div>
     </div>
   );

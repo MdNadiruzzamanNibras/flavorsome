@@ -1,6 +1,6 @@
 import Image from "next/image";
-import chef from "../images/hero-after/main_chef.jpg"
-import an from "../images/hero-after/lafing.jpg"
+import chef from "@/images/hero-after/main_chef.jpg"
+import an from "@/images/hero-after/lafing.jpg"
 
 const HeroAfter = () => {
     return (
