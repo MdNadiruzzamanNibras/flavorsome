@@ -7,6 +7,7 @@ import banner from '../images/banner/banner.jpg'
 import Menu from "@/Component/Home/Menu";
 import Master_Chef from "@/Component/Home/Master_Chef";
 import BookTable from "@/Component/Home/BookTable";
+import HappyClient from "@/Component/Home/HappyClient";
 const Home = () => {
   return (
     <div>
@@ -25,6 +26,10 @@ const Home = () => {
         <Menu></Menu>
         <Master_Chef></Master_Chef>
         <BookTable></BookTable>
+        <HappyClient></HappyClient>
+      </div>
+      <div>
+        
       </div>
     </div>
   );

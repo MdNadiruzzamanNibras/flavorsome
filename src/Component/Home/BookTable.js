@@ -1,10 +1,10 @@
-import book from '../../images/banner/book_banner.jpg'
+
 const BookTable = () => {
     const handleBook = () => {
         console.log("book a table");
     }
     return (
-        <div style={{backgroundImage:`url(${book})`}} className=" w-full h-72 flex justify-between items-center my-7">
+        <div  className=" h-24  flex justify-between items-center my-7">
             <div>
                 <input type="text" placeholder="Enter you email" className="border-b-2 focus:outline-none" />
             </div>
