@@ -6,6 +6,7 @@ import Image from "next/image";
 import banner from '../images/banner/banner.jpg'
 import Menu from "@/Component/Home/Menu";
 import Master_Chef from "@/Component/Home/Master_Chef";
+import BookTable from "@/Component/Home/BookTable";
 const Home = () => {
   return (
     <div>
@@ -23,6 +24,7 @@ const Home = () => {
         <CateringServices></CateringServices>
         <Menu></Menu>
         <Master_Chef></Master_Chef>
+        <BookTable></BookTable>
       </div>
     </div>
   );
