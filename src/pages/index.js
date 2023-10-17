@@ -8,6 +8,7 @@ import Menu from "@/Component/Home/Menu";
 import Master_Chef from "@/Component/Home/Master_Chef";
 import BookTable from "@/Component/Home/BookTable";
 import HappyClient from "@/Component/Home/HappyClient";
+import RecentPost from "@/Component/Home/RecentPost";
 const Home = () => {
   return (
     <div>
@@ -27,10 +28,9 @@ const Home = () => {
         <Master_Chef></Master_Chef>
         <BookTable></BookTable>
         <HappyClient></HappyClient>
+        <RecentPost></RecentPost>
       </div>
-      <div>
-        
-      </div>
+      
     </div>
   );
 };

@@ -4,7 +4,7 @@ const BookTable = () => {
         console.log("book a table");
     }
     return (
-        <div  className=" h-24  flex justify-between items-center my-7">
+        <div  className=" h-24  flex justify-between items-center my-7 ">
             <div>
                 <input type="text" placeholder="Enter you email" className="border-b-2 focus:outline-none" />
             </div>

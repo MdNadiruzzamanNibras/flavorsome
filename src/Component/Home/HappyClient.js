@@ -8,7 +8,7 @@ const HappyClient = () => {
     return (
         <div className='my-20'>
             <h3 className='text-center text-4xl font-bold'>Happy Customer</h3>
-            <div className='grid grid-cols-3 my-6 '>
+            <div className='grid lg:grid-cols-3 my-6 container'>
             
             <div className="card w-96 h-64 flex items-center bg-base-100 py-3 px-4  shadow-xl">
             
