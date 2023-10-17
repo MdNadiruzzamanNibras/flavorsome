@@ -4,7 +4,9 @@ const BookTable = () => {
         console.log("book a table");
     }
     return (
-        <div  className=" h-24  flex justify-between items-center my-7 ">
+        <div className="container">
+            <h1 className='text-center text-4xl font-bold'>Book A Table</h1>
+             <div  className=" h-24  lg:flex lg:justify-between items-center my-7 ">
             <div>
                 <input type="text" placeholder="Enter you email" className="border-b-2 focus:outline-none" />
             </div>
@@ -48,6 +50,7 @@ const BookTable = () => {
             </div>
             <button className="py-2 px-6 rounded-xl btn text-lg font-semibold " style={{backgroundColor:"#c8a97e", color:"whitesmoke"}} onClick={handleBook}>Book A Table</button>
         </div>
+       </div>
     );
 };
 

@@ -6,11 +6,11 @@ const RecentPost = () => {
     return (
         <div className='my-14'>
             <h3 className='text-center text-4xl font-bold'>Recent Posts</h3>
-            <div className='grid grid-cols-3 gap-3 container'>
-                <div className="card w-96   py-3 px-4  shadow-xl">
+            <div className='grid lg:grid-cols-3 lg:gap-3 container'>
+                <div className="card lg:w-96   py-3 px-4  shadow-xl">
 
                     <Image
-                        className='w-96 h-56'
+                        className='lg:w-96 h-56'
                         src={post_one}
                         alt='post'
                     />

@@ -7,39 +7,23 @@ const Menu = () => {
         <div className="my-20  ">
             <h1 className="text-6xl font-extrabold text-center my-7">Our Menu</h1>
              <div className=" ">
-          <div className="  flex items-center rounded-lg border-2 w-[520px]  my-5">
+          <div className="  lg:flex lg:items-center rounded-lg border-2 lg:w-[520px] container  my-5">
             <div className="w-64 h-64">
               <Image src={ch} className="w-64 h-64" alt="Shoes" />
             </div>
-            <div>
-              <div className="flex w-64 h-64 justify-between">
-                <div className="ml-2">
-                  <h5>Grilled Beef <br /> with potatoes</h5> 
+            <div className="w-64 h-64">
+              <div className="flex  justify-between text-xl font-bold mt-3">
+                <div className="ml-2 ">
+                  <h5 >Grilled Beef <br /> with potatoes</h5> 
                 </div>
                 <div><h5 style={{color:"#c8a97e"}}> $29 </h5></div>
               </div>
+              <h4 className="text-lg mt-12 mx-3">Meat, Potatoes, Rice, Tomatoe</h4>
+              <button style={{backgroundColor:"#c8a97e", color:"white"}} className=" py-2 px-5 mt-3 ml-3 font-bold">Order Now</button>
             </div>
             </div>
-             <div className="card w-72  bg-base-100 shadow-xl  ">
-  <Image src={ch} className="w-72 h-72" alt="Shoes" />
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-             <div className="card w-60 bg-base-100 shadow-xl ">
-  <Image src={ch} className="w-60" alt="Shoes" />
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+             
+            
        </div>
        </div>
     );

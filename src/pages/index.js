@@ -9,6 +9,7 @@ import Master_Chef from "@/Component/Home/Master_Chef";
 import BookTable from "@/Component/Home/BookTable";
 import HappyClient from "@/Component/Home/HappyClient";
 import RecentPost from "@/Component/Home/RecentPost";
+import OurStory from "@/Component/Home/OurStory";
 const Home = () => {
   return (
     <div>
@@ -23,6 +24,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto">
         <HeroAfter></HeroAfter>
         <CountAll></CountAll>
+        <OurStory></OurStory>
         <CateringServices></CateringServices>
         <Menu></Menu>
         <Master_Chef></Master_Chef>
