@@ -4,7 +4,8 @@ import an from "@/images/hero-after/lafing.jpg"
 
 const HeroAfter = () => {
     return (
-        <div className="flex justify-center  my-16">
+        <div className="container mx-auto">
+            <div className="lg:flex lg:justify-center  my-16">
             <div className="flex mr-4">
                 <Image
   src={chef}
@@ -24,6 +25,7 @@ const HeroAfter = () => {
                 <p className="w-96 lg:font-medium lg:text-xl lg:my-8">Mon - Fri <span className="font-bold">8 AM - 11 PM</span></p>
                 <h4 style={{color:"#D1B000"}} className="font-bold  lg:text-5xl md:text-2xl ">+ 1-978-123-4567</h4>
             </div>
+        </div>
         </div>
     );
 };

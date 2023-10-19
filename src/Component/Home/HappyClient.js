@@ -6,9 +6,10 @@ import man_tw from '../../images/avatar/image_2.jpg'
 import Image from 'next/image';
 const HappyClient = () => {
     return (
-        <div className='my-20'>
+        <div className='container mx-auto'>
+             <div className='my-20'>
             <h3 className='text-center text-4xl font-bold'>Happy Customer</h3>
-            <div className='grid lg:grid-cols-3 my-6 container'>
+            <div className='grid lg:grid-cols-3 my-6 '>
             
             <div className="card w-96 h-64 flex items-center bg-base-100 py-3 px-4  shadow-xl">
             
@@ -45,6 +46,7 @@ const HappyClient = () => {
             </div>
         </div>
         </div>
+       </div>
        
     );
 };

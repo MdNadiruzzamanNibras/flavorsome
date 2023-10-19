@@ -2,7 +2,8 @@ import { CountUp } from 'use-count-up'
 
 const CountAll = () => {
     return (
-        <div className='grid lg:grid-cols-5 mb-4'>
+        <div className='container mx-auto'>
+            <div className='grid lg:grid-cols-5 mb-4'>
             <div>
                 <h1 style={{color:"#D1B000"}} className='text-5xl font-bold'><CountUp isCounting start={0} end={18} duration={13} /></h1>
                 <p className='lg:font-medium lg:text-base uppercase'>Years of experienced</p>
@@ -25,6 +26,7 @@ const CountAll = () => {
             <div>
                 <p className='lg:font-medium lg:text-lg'>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
             </div>
+        </div>
         </div>
     );
 };

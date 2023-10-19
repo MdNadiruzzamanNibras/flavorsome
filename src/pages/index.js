@@ -10,7 +10,9 @@ import BookTable from "@/Component/Home/BookTable";
 import HappyClient from "@/Component/Home/HappyClient";
 import RecentPost from "@/Component/Home/RecentPost";
 import OurStory from "@/Component/Home/OurStory";
-const Home = () => {
+import FoodPHILOSOPHY from "@/Component/Home/FoodPHILOSOPHY";
+const Home = ({ allMenu }) => {
+  console.log(allMenu);
   return (
     <div>
       <div>
@@ -21,16 +23,19 @@ const Home = () => {
 />
 
       </div>
-      <div className="max-w-7xl mx-auto">
+      
+        <div className=" mx-auto">
         <HeroAfter></HeroAfter>
         <CountAll></CountAll>
         <OurStory></OurStory>
+        <FoodPHILOSOPHY></FoodPHILOSOPHY>
         <CateringServices></CateringServices>
         <Menu></Menu>
         <Master_Chef></Master_Chef>
         <BookTable></BookTable>
         <HappyClient></HappyClient>
         <RecentPost></RecentPost>
+      {/* </div> */}
       </div>
       
     </div>
@@ -42,3 +47,4 @@ export default Home;
 Home.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
+

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const CateringServices = () => {
     return (
-        <div className='my-16 container'>
+        <div className='my-16 container mx-auto'>
             <h1 className="lg:text-6xl lg:font-extrabold text-center">Catering Services</h1>
             <div className='lg:flex lg:justify-evenly lg:items-center my-8'>
                 <div className='text-center'>

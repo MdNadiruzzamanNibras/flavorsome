@@ -4,7 +4,8 @@ import { TfiCommentAlt } from 'react-icons/tfi';
 import post_one from '../../images/posts/post_one.jpg'
 const RecentPost = () => {
     return (
-        <div className='my-14'>
+        <div className='container mx-auto'>
+             <div className='my-14'>
             <h3 className='text-center text-4xl font-bold'>Recent Posts</h3>
             <div className='grid lg:grid-cols-3 lg:gap-3 container'>
                 <div className="card lg:w-96   py-3 px-4  shadow-xl">
@@ -58,6 +59,7 @@ const RecentPost = () => {
                 
             </div>
         </div>
+       </div>
     );
 };
 

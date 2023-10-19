@@ -1,4 +1,4 @@
-import React from 'react';
+
 import owner from '../../images/chef/male_one.jpg'
 import master from '../../images/chef/women_one.jpg'
 import chef_one from '../../images/chef/male_two.jpg'
@@ -11,7 +11,7 @@ import { BsInstagram } from 'react-icons/bs';
 
 const Master_Chef = () => {
     return (
-        <div className='my-16 container'>
+        <div className='my-16 container mx-auto'>
             <h1 className='text-center text-4xl font-bold'>Our Master Chef</h1>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3'>
                 <div className='w-64  '>

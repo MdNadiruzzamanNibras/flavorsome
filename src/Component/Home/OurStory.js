@@ -1,7 +1,8 @@
 
 const OurStory = () => {
     return (
-        <div className="flex justify-center h-56">
+        <div className="container mx-auto">
+             <div className="flex justify-center h-56">
             <div>
 <h1 className="text-4xl text-center font-bold">Our Story</h1>
             <h5 style={{color:'"#c8a97e"'}} className="text-2xl text-center">THE SECRET OF OUR SUCCESS
@@ -10,6 +11,7 @@ const OurStory = () => {
 </p>
             </div>
         </div>
+       </div>
     );
 };
 
