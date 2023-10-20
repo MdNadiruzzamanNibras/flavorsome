@@ -2,53 +2,51 @@
     "menu": [
         {
             "id": "1",
-            "title": "Chiken Crispy",
-             "price": 50,
-            "image_url": "/src/images/menu/chiken_crispy.jpg"
+            "title": "Chicken Crispy",
+            "price": 50,
+            "image_url": "/images/menu/chiken_crispy.jpg"
         },
         {
             "id": "2",
             "title": "Halloumi",
-             "price": 250,
-            "image_url": "/src/images/menu/halloumi.jpg"
+            "price": 250,
+            "image_url": "/images/menu/halloumi.jpg"
         },
         {
             "id": "3",
-            "title": "Noddless",
-             "price": 40,
-            "image_url": "/src/images/menu/noddole.jpg"
+            "title": "Noodles",
+            "price": 40,
+            "image_url": "/images/menu/noddole.jpg"
         },
         {
             "id": "4",
-            "title": "Oatmil",
-             "price": 50,
-            "image_url": "/src/images/menu/oatmil.jpg"
+            "title": "Oatmeal",
+            "price": 50,
+            "image_url": "/images/menu/oatmil.jpg"
         },
         {
             "id": "5",
-            "title": "Chiken Crispy",
-             "price": 50,
-            "image_url": "/src/images/menu/chiken_crispy.jpg"
+            "title": "Chicken Crispy",
+            "price": 50,
+            "image_url": "/images/menu/chicken_crispy.jpg"
         },
         {
             "id": "6",
             "title": "Halloumi",
-             "price": 250,
-            "image_url": "/src/images/menu/halloumi.jpg"
+            "price": 250,
+            "image_url": "/images/menu/halloumi.jpg"
         },
         {
             "id": "7",
-            "title": "Noddless",
-             "price": 40,
-            "image_url": "/src/images/menu/noddole.jpg"
+            "title": "Noodles",
+            "price": 40,
+            "image_url": "/images/menu/noodles.jpg"
         },
         {
             "id": "8",
-            "title": "Oatmil",
-             "price": 50,
-            "image_url": "/src/images/menu/oatmil.jpg"
+            "title": "Oatmeal",
+            "price": 50,
+            "image_url": "/images/menu/oatmeal.jpg"
         }
-        
-        
     ]
 }

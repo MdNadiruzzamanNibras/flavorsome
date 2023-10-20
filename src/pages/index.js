@@ -3,7 +3,7 @@ import CountAll from "@/Component/Home/CountAll";
 import HeroAfter from "@/Component/Home/HeroAfter";
 import RootLayout from "@/Component/layout/RootLayout";
 import Image from "next/image";
-import banner from '../images/banner/banner.jpg'
+import banner from '../../public/images/banner/banner.jpg'
 import Menu from "@/Component/Home/Menu";
 import Master_Chef from "@/Component/Home/Master_Chef";
 import BookTable from "@/Component/Home/BookTable";
@@ -11,8 +11,8 @@ import HappyClient from "@/Component/Home/HappyClient";
 import RecentPost from "@/Component/Home/RecentPost";
 import OurStory from "@/Component/Home/OurStory";
 import FoodPHILOSOPHY from "@/Component/Home/FoodPHILOSOPHY";
-const Home = ({ allMenu }) => {
-  console.log(allMenu);
+const Home = ({ menuData }) => {
+  console.log(menuData);
   return (
     <div>
       <div>
@@ -30,7 +30,7 @@ const Home = ({ allMenu }) => {
         <OurStory></OurStory>
         <FoodPHILOSOPHY></FoodPHILOSOPHY>
         <CateringServices></CateringServices>
-        <Menu></Menu>
+        <Menu menuData={menuData}></Menu>
         <Master_Chef></Master_Chef>
         <BookTable></BookTable>
         <HappyClient></HappyClient>
@@ -47,4 +47,16 @@ export default Home;
 Home.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
+
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:5000/menu");
+  const data = await res.json(); 
+  console.log(data);
+  return {
+    props: {
+     
+      menuData: data
+    }
+  };
+}
 

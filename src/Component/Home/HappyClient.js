@@ -1,7 +1,7 @@
 import React from 'react';
 import { HiOutlineMinus } from 'react-icons/hi';
-import man_one from '../../images/avatar/images.jpg'
-import man_tw from '../../images/avatar/image_2.jpg'
+import man_one from '../../../public/images/avatar/images.jpg'
+import man_tw from '../../../public/images/avatar/image_2.jpg'
 
 import Image from 'next/image';
 const HappyClient = () => {

@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import React from 'react';
 import { TfiCommentAlt } from 'react-icons/tfi';
-import post_one from '../../images/posts/post_one.jpg'
+import post_one from '../../../public/images/posts/post_one.jpg'
 const RecentPost = () => {
     return (
         <div className='container mx-auto'>

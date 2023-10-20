@@ -1,8 +1,8 @@
 
-import owner from '../../images/chef/male_one.jpg'
-import master from '../../images/chef/women_one.jpg'
-import chef_one from '../../images/chef/male_two.jpg'
-import chef_two from '../../images/chef/male_three.jpg'
+import owner from '../../../public/images/chef/male_one.jpg'
+import master from '../../../public/images/chef/women_one.jpg'
+import chef_one from '../../../public/images/chef/male_two.jpg'
+import chef_two from '../../../public/images/chef/male_three.jpg'
 import Image from 'next/image';
 import { LiaTwitter } from 'react-icons/lia';
 import { FaFacebookF } from 'react-icons/fa';

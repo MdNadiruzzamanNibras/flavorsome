@@ -1,6 +1,6 @@
 import Image from "next/image";
-import chef from "@/images/hero-after/main_chef.jpg"
-import an from "@/images/hero-after/lafing.jpg"
+import chef from "../../../public/images/hero-after/main_chef.jpg"
+import an from "../../../public/images/hero-after/lafing.jpg"
 
 const HeroAfter = () => {
     return (
@@ -9,12 +9,12 @@ const HeroAfter = () => {
             <div className="flex mr-4">
                 <Image
   src={chef}
-  style={{ width: '17vw', height: '50vh' }}
+ className="w-64 h-[450px] mt-10"
   alt="main chef"
 />
                 <Image
   src={an}
-  style={{ width: '17vw', height: '50vh', margin:"4vh 2vh" }}
+  className="w-64  h-[450px] mx-3"
   alt="main chef"
 />
             </div>

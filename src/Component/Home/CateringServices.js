@@ -1,6 +1,6 @@
-import cake from '@/images/catarning/images (1).png';
-import food from '@/images/catarning/food_.png';
-import meeting from '@/images/catarning/meeting.png';
+import cake from '../../../public/images/catarning/images (1).png';
+import food from '../../../public/images/catarning/food_.png';
+import meeting from '../../../public/images/catarning/meeting.png';
 import Image from 'next/image';
 
 const CateringServices = () => {
