@@ -22,30 +22,6 @@
             "id": "4",
             "title": "Oatmeal",
             "price": 50,
-            "image_url": "/images/menu/oatmil.jpg"
-        },
-        {
-            "id": "5",
-            "title": "Chicken Crispy",
-            "price": 50,
-            "image_url": "/images/menu/chicken_crispy.jpg"
-        },
-        {
-            "id": "6",
-            "title": "Halloumi",
-            "price": 250,
-            "image_url": "/images/menu/halloumi.jpg"
-        },
-        {
-            "id": "7",
-            "title": "Noodles",
-            "price": 40,
-            "image_url": "/images/menu/noodles.jpg"
-        },
-        {
-            "id": "8",
-            "title": "Oatmeal",
-            "price": 50,
             "image_url": "/images/menu/oatmeal.jpg"
         }
     ]

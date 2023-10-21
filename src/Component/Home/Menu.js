@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Menu = ({menuData}) => {
@@ -24,7 +25,9 @@ const Menu = ({menuData}) => {
                 <div><h5 style={{color:"#c8a97e"}}> $29 </h5></div>
               </div>
               <h4 className="text-lg mt-12 mx-3">Meat, Potatoes, Rice, Tomatoe</h4>
-              <button style={{backgroundColor:"#c8a97e", color:"white"}} className=" py-2 px-5 mt-3 ml-3 font-bold">Order Now</button>
+                    <Link href={`food/${food?.id}`}>
+                      <button style={{backgroundColor:"#c8a97e", color:"white"}} className=" py-2 px-5 mt-3 ml-3 font-bold">Order Now</button>
+                    </Link>
             </div>
             </div>
                  

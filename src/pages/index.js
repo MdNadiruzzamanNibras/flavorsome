@@ -12,7 +12,7 @@ import RecentPost from "@/Component/Home/RecentPost";
 import OurStory from "@/Component/Home/OurStory";
 import FoodPHILOSOPHY from "@/Component/Home/FoodPHILOSOPHY";
 const Home = ({ menuData }) => {
-  console.log(menuData);
+  
   return (
     <div>
       <div>
@@ -49,14 +49,18 @@ Home.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/menu");
-  const data = await res.json(); 
-  console.log(data);
-  return {
-    props: {
-     
-      menuData: data
+  
+    const res = await fetch("http://localhost:5000/menu/");
+    
+    const data = await res.json();
+if (!res.ok) {
+      throw new Error("Failed to fetch data");
     }
-  };
-}
-
+    return {
+      props: {
+        menuData: data,
+      },
+      revalidate: 10,
+    };
+  
+};
