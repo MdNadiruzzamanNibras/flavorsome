@@ -48,19 +48,19 @@ Home.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticProps = async () => {
-  
-    const res = await fetch("http://localhost:5000/menu/");
-    
-    const data = await res.json();
-if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return {
-      props: {
-        menuData: data,
-      },
-      revalidate: 10,
-    };
-  
+export const getServerSideProps = async () => {
+  const res = await fetch("https://encouraging-pants-dog.cyclic.app/menus");
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return {
+    props: {
+      menuData: data,
+    },
+  };
 };
+
+
