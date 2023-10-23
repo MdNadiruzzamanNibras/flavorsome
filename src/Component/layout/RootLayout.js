@@ -1,10 +1,29 @@
 import Link from "next/link";
 
 
+
 const RootLayout = ({ children }) => {
+  // let Alllink = [
+  //   {
+  //     name: "Home",
+  //     Links: '/',
+  //     id:1
+  //   },
+  //   {
+  //     name: "Menu",
+  //     Link: '/menu',
+  //     id:2
+  //   },
+  //   {
+  //     name: "Contact",
+  //     Links: '/contact',
+  //     id:3
+  //   }
+    
+  // ]
   return (
     <div>
-     <div className="navbar bg-base-100">
+       <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -15,14 +34,13 @@ const RootLayout = ({ children }) => {
               <p>Home</p></Link>
               <Link href="/contact">
               <p>Contact</p></Link>
-        <li>
-          
-          
-        </li>
-        <li><a>Menu</a></li>
+              <Link href="/menu">
+              <p>Menu</p></Link>
+      
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">Feliciano</a>
+          <a className="btn btn-ghost normal-case text-xl">
+            Flavorsome</a>
   </div>
   <div className="navbar-center hidden lg:flex ">
     <ul className="lg:flex  items-center">
@@ -30,9 +48,13 @@ const RootLayout = ({ children }) => {
               <Link href="/">Home</Link>
              
       </li>
-      <li className="ml-2">
+      <li className="ml-4">
          <Link href="/contact">
               Contact</Link>
+      </li>
+      <li className="ml-4">
+         <Link href="/menu">
+              Menu</Link>
       </li>
       
     </ul>
@@ -41,6 +63,31 @@ const RootLayout = ({ children }) => {
     <></>
   </div>
 </div>
+      {/* <div className="shadow-md w-full fixed top-0 left-0">
+        <div className="md:flex md:justify-between md:items-center bg-white py-4">
+          <div>
+            the food
+          </div>
+          <div>
+            <h1><AiOutlineMenu/></h1>
+            <h1><AiOutlineClose/></h1>
+          </div>
+          <div>
+            <ul className="md:flex md:items-center md:pb-0 pb-12
+            absolute md:static bg-white md:z-auto z-[-1] w-full
+             md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in left-0">
+              {Alllink.map((a)=>
+              <li key={a.id}>
+                  <Link href={a?.Links}>{ a.name}</Link>
+                </li>
+              )
+                
+              }
+              
+            </ul>
+            </div>
+        </div>
+     </div> */}
       <div >{children}</div>
       <footer className="footer p-10 bg-neutral text-neutral-content">
   <nav>

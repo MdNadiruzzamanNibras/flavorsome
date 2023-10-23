@@ -56,7 +56,7 @@ const ContactDetail = () => {
                             <h4 className='text-xl'><span className='font-bold'>Phone:</span> <span className='block font-medium'>+880-1783-014828</span></h4> 
                         </div>
                         <div>
-                            <h4 className='text-xl'><span className='font-bold'>Address:</span> <span className='inline-block font-medium'>nadiruzzamannibras@gmail.com</span></h4> 
+                            <h4 className='text-xl'><span className='font-bold'>Email:</span> <span className='inline-block font-medium'>nadiruzzamannibras@gmail.com</span></h4> 
                         </div>
                         
                        
