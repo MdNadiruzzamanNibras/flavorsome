@@ -13,6 +13,8 @@ const RootLayout = ({ children }) => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <Link href="/">
               <p>Home</p></Link>
+              <Link href="/contact">
+              <p>Contact</p></Link>
         <li>
           
           
@@ -22,13 +24,15 @@ const RootLayout = ({ children }) => {
     </div>
     <a className="btn btn-ghost normal-case text-xl">Feliciano</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul>
+  <div className="navbar-center hidden lg:flex ">
+    <ul className="lg:flex  items-center">
       <li>
-        <Link href="/">Home</Link>
+              <Link href="/">Home</Link>
+             
       </li>
-      <li>
-        
+      <li className="ml-2">
+         <Link href="/contact">
+              Contact</Link>
       </li>
       
     </ul>
