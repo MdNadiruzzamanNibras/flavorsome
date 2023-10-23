@@ -12,7 +12,7 @@ import { BsInstagram } from 'react-icons/bs';
 const Master_Chef = () => {
     return (
         <div className='my-16 container mx-auto'>
-            <h1 className='text-center text-4xl font-bold'>Our Master Chef</h1>
+            <h1 className='text-center text-4xl my-24 font-bold'>Our Master Chef</h1>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3'>
                 <div className='w-64  '>
                     <Image src={owner} className="w-64 h-80 shadow-md " alt="owner" />

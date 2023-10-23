@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 
 
 
@@ -21,9 +23,10 @@ const RootLayout = ({ children }) => {
   //   }
     
   // ]
+  const [open, setOpen] =useState(false)
   return (
     <div>
-       <div className="navbar bg-base-100">
+       {/* <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -62,32 +65,42 @@ const RootLayout = ({ children }) => {
   <div className="navbar-end">
     <></>
   </div>
-</div>
-      {/* <div className="shadow-md w-full fixed top-0 left-0">
+</div> */}
+      <div className="shadow-md w-full fixed top-0 left-0">
         <div className="md:flex md:justify-between md:items-center bg-white py-4">
           <div>
             the food
           </div>
-          <div>
-            <h1><AiOutlineMenu/></h1>
-            <h1><AiOutlineClose/></h1>
+          <div onClick={()=>setOpen(!open)} className="absolute text-2xl top-6 right-8 cursor-pointer md:hidden">
+           {open? <h1><AiOutlineClose/></h1>:
+            <h1> <AiOutlineMenu/></h1>}
           </div>
           <div>
-            <ul className="md:flex md:items-center md:pb-0 pb-12
-            absolute md:static bg-white md:z-auto z-[-1] w-full
-             md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in left-0">
-              {Alllink.map((a)=>
-              <li key={a.id}>
-                  <Link href={a?.Links}>{ a.name}</Link>
-                </li>
-              )
-                
-              }
+            <ul className={`md:flex md:items-center md:pb-0 pb-12
+            absolute md:static bg-white lg:mr-40 md:mr-14 md:z-auto z-[-1] w-full
+             md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in left-0 ${open ? 'top-14 opacity-100' : 'top-[-490px]'} md:opacity-100 `}>
+              
+              <li>
+             
+             
+      </li>
+              <li>
+              <Link className="ml-4 top-19" href="/">Home</Link>
+             
+      </li>
+      <li className="ml-4">
+         <Link href="/contact">
+              Contact</Link>
+      </li>
+      <li className="ml-4">
+         <Link href="/menu">
+              Menu</Link>
+      </li>
               
             </ul>
             </div>
         </div>
-     </div> */}
+     </div>
       <div >{children}</div>
       <footer className="footer p-10 bg-neutral text-neutral-content">
   <nav>

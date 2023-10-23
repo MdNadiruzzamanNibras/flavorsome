@@ -6,15 +6,15 @@ const HeroAfter = () => {
     return (
         <div className="container mx-auto">
             <div className="lg:flex lg:justify-center  my-16">
-            <div className="flex mr-4">
+            <div className="lg:flex mr-4">
                 <Image
   src={chef}
- className="w-64 h-[450px] mt-10"
+ className="lg:w-64 lg:h-[450px] mt-10"
   alt="main chef"
 />
                 <Image
   src={an}
-  className="w-64  h-[450px] mx-3"
+  className="lg:w-64  lg:h-[450px] mx-3"
   alt="main chef"
 />
             </div>

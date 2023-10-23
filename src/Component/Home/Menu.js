@@ -9,7 +9,7 @@ const Menu = ({menuData}) => {
          <div className="my-20  ">
             <h1 className="text-6xl font-extrabold text-center my-7">Our Menu</h1>
           
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 ">
+             <div className="grid grid-cols-1 md:ml-24 lg:grid-cols-2 gap-5 ">
          
             { 
               menuData.slice(0, 4).map(food =>
