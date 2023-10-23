@@ -10,7 +10,7 @@ const AllFood = ({menuData}) => {
                     <h1 className="text-3xl font-bold   text-black"> Our Menu
                 </h1>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
+                <div className="grid md:ml-44 grid-cols-1 md:grid-cols-2 gap-5 ">
          
             { 
               menuData.map(food =>
