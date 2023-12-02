@@ -6,7 +6,8 @@ import RootLayout from '@/Component/layout/RootLayout';
 const AllMenu = ({ menuData }) => {
     if (!menuData) {
         <Loading></Loading>
-    }
+  }
+  console.log(menuData, "menu page");
     return (
         <div>
             <AllFood menuData={ menuData} />

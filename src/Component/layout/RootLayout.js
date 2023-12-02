@@ -10,7 +10,7 @@ const RootLayout = ({ children }) => {
   return (
     <div>
        
-      <div className="shadow-md w-full fixed md:sticky top-0 left-0">
+      <div className="shadow-md w-full   top-0 left-0">
         <div className="md:flex md:justify-between md:items-center bg-white py-4">
           <div>
            <h1 className="text-3xl font-bold pl-7 md:ml-10"> Flavorsome</h1>
@@ -20,9 +20,7 @@ const RootLayout = ({ children }) => {
             <h1> <AiOutlineMenu/></h1>}
           </div>
           <div>
-            <ul className={`md:flex md:items-center md:pb-0 pb-12
-            absolute md:static bg-white lg:mr-40 md:mr-14 md:z-auto z-[-1] w-full
-             md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in left-0 ${open ? 'top-14 opacity-100' : 'top-[-490px]'} md:opacity-100 `}>
+            <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white lg:mr-40 md:mr-14 md:z-auto z-[-1] w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in left-0 ${open ? 'top-16 ' : 'top-[-490px]'} `}>
               
               <li>
              

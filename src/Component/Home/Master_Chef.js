@@ -13,8 +13,8 @@ const Master_Chef = () => {
     return (
         <div className='my-16 container mx-auto'>
             <h1 className='text-center text-4xl my-24 font-bold'>Our Master Chef</h1>
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3'>
-                <div className='w-64  '>
+            <div className='grid lg:grid-cols-4  md:grid-cols-2 sm:grid-cols-1 gap-3'>
+                <div className='w-64 mx-auto  md:ml-10 lg:ml-0 '>
                     <Image src={owner} className="w-64 h-80 shadow-md " alt="owner" />
                     <h4 className='text-xl font-bold ml-3 my-2'>John Smooth</h4>
                     <p className='ml-3'>Restaurant Owner</p>
@@ -25,7 +25,7 @@ const Master_Chef = () => {
                         <a href='' className='mr-3 text-2xl'><BsInstagram/></a>
                     </div>
                 </div>
-                <div className='w-64  '>
+                <div className='w-64  mx-auto  md:ml-10 lg:ml-0'>
                     <Image src={master} className="w-64 h-80 shadow-md " alt="owner" />
                     <h4 className='text-xl font-bold ml-3 my-2'>Rebeca Welson</h4>
                     <p className='ml-3'>Head Chef</p>
@@ -36,7 +36,7 @@ const Master_Chef = () => {
                         <a href='' className='mr-3 text-2xl'><BsInstagram/></a>
                     </div>
                 </div>
-                <div className='w-64  '>
+                <div className='w-64  mx-auto  md:ml-10 lg:ml-0'>
                     <Image src={chef_one} className="w-64 h-80 shadow-md " alt="owner" />
                     <h4 className='text-xl font-bold ml-3 my-2'>Kharl Branyt</h4>
                     <p className='ml-3'>Chef</p>
@@ -47,7 +47,7 @@ const Master_Chef = () => {
                         <a href='' className='mr-3 text-2xl'><BsInstagram/></a>
                     </div>
                 </div>
-                <div className='w-64  '>
+                <div className='w-64 mx-auto  md:ml-10 lg:ml-0 '>
                     <Image src={chef_two} className="w-64 h-80 shadow-md " alt="owner" />
                     <h4 className='text-xl font-bold ml-3 my-2'>Luke Simon</h4>
                     <p className='ml-3'>Chef</p>

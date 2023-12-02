@@ -11,7 +11,7 @@ const HappyClient = () => {
             <h3 className='text-center text-4xl font-bold'>Happy Customer</h3>
             <div className='grid lg:grid-cols-3 my-6 '>
             
-            <div className="card w-96 h-64 flex items-center bg-base-100 py-3 px-4  shadow-xl">
+            <div className="card md:mx-auto lg:mx-0 md:my-7 w-96 h-64 flex items-center bg-base-100 py-3 px-4  shadow-xl">
             
                 <div className="avatar my-2">
                     <div className="w-16 rounded-full">
@@ -22,7 +22,7 @@ const HappyClient = () => {
                 <p className='mb-2 mt-4 mx-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cupiditate rerum iste excepturi omnis nostrum minima unde molestias vel accusamus eum itaque fuga!</p>
                 <h4 className=' flex items-center'><HiOutlineMinus/> <span className='text-2xl font-semibold'>Ian Boner</span></h4>
             </div>
-            <div className="card w-96 h-64 flex items-center bg-base-100 py-3 px-4  shadow-xl">
+            <div className="card md:mx-auto lg:mx-0 md:my-7 w-96 h-64 flex items-center bg-base-100 py-3 px-4  shadow-xl">
             
                 <div className="avatar my-2">
                     <div className="w-16 rounded-full">
@@ -33,7 +33,7 @@ const HappyClient = () => {
                 <p className='mb-2 mt-4 mx-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cupiditate rerum iste excepturi omnis nostrum minima unde molestias vel accusamus eum itaque fuga!</p>
                  <h4 className=' flex items-center'><HiOutlineMinus/> <span className='text-2xl font-semibold'>Mark Wood</span></h4>
             </div>
-            <div className="card w-96 h-64 flex items-center bg-base-100 py-3 px-4  shadow-xl">
+            <div className="card md:mx-auto lg:mx-0 md:my-7 w-96 h-64 flex items-center bg-base-100 py-3 px-4  shadow-xl">
             
                 <div className="avatar my-2">
                     <div className="w-16 rounded-full">

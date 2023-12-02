@@ -9,11 +9,11 @@ const BookTable = () => {
         <div className="container mx-auto">
              <div className="bg-gray-700 px-8 py-4  rounded-lg">
             <h1 className='text-center text-4xl mt-4 text-white font-bold'>Book A Table</h1>
-             <div  className=" h-24  lg:flex lg:justify-between items-center my-7 ">
-            <div>
+             <div  className="   lg:h-24  lg:flex lg:justify-between items-center my-7 ">
+            <div className='flex justify-center lg:flex-none my-2 lg:my-0'>
                 <input type="text" placeholder="Enter you email" className="border-b-2 rounded-lg px-5 py-2 focus:outline-none" />
             </div>
-            <div>
+            <div className='flex justify-center lg:flex-none my-2 lg:my-0'>
                 <select name="schedule" className="border-b-2 w-30 px-5 rounded-lg py-2 focus:outline-none focus:" >
   <option value="">1 Person</option>
   <option value="">2 Persons</option>
@@ -25,11 +25,11 @@ const BookTable = () => {
 
 </select>
             </div>
-            <div>
+            <div className='flex justify-center lg:flex-none my-2 lg:my-0'>
                 <input type="date" name="date" placeholder="" id="" className="border-b-2 rounded-lg w-30 px-5 py-2 focus:outline-none focus:"/>
            </div>
             
-            <div>
+            <div className='flex justify-center lg:flex-none my-2 lg:my-0'>
                 <select name="schedule" className="border-b-2 px-5 py-2 rounded-lg  w-30 focus:outline-none" >
   <option value="12:00 AM">12:00 AM</option>
   <option value="12:30 AM">12:30 AM</option>
@@ -51,7 +51,10 @@ const BookTable = () => {
   <option value="8:30 AM">1:30 AM</option>
 </select>
             </div>
-                    <button className="py-2 px-6 rounded btn text-lg font-semibold " style={{ backgroundColor: "#c8a97e", color: "whitesmoke",  }} onClick={handleBook}>Book A Table</button>
+                    <div className='flex justify-center lg:flex-none my-2 lg:my-0'>
+                        <button className="py-2 px-6  rounded btn text-lg 
+                    font-semibold " style={{ backgroundColor: "#c8a97e", color: "whitesmoke", }} onClick={handleBook}>Book A Table</button>
+                    </div>
                      <ToastContainer />
         </div>
        </div>

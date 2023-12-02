@@ -9,8 +9,8 @@ const FoodPHILOSOPHY = () => {
             
             <div className='grid grid-cols-1 lg:grid-cols-2  gap-2'>
             <div className='lg:ml-72'>
-                <Image src={two} className="w-72 h-96  relative " alt="food philosopy" />
-                 <Image src={first} className="w-80 h-[400px]  absolute ml-24 mt-[-500px]" alt="food philosopy" />
+                <Image src={two} className="lg:w-72 lg:h-96  lg:relative " alt="food philosopy" />
+                 <Image src={first} className="lg:w-80 lg:h-[400px]  lg:absolute lg:ml-24 lg:mt-[-500px]" alt="food philosopy" />
                 
                
                 
