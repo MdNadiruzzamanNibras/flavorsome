@@ -38,6 +38,10 @@ const RootLayout = ({ children }) => {
          <Link href="/menu">
               Menu</Link>
       </li>
+      <li className="ml-4">
+         <Link href="/login">
+              Login</Link>
+      </li>
               
             </ul>
             </div>
