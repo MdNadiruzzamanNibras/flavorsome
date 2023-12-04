@@ -1,52 +1,68 @@
+import auth from "@/firebase/firebase.config";
+import { signOut } from "firebase/auth";
 import Link from "next/link";
 import { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 
 
 
 const RootLayout = ({ children }) => {
-  
-  const [open, setOpen] =useState(false)
+  const [user] = useAuthState(auth);
+  const [open, setOpen] = useState(false)
+
+  const logout = () => {
+        signOut(auth);
+        
+      };
+  const toggleMenu = () => {
+    setOpen(!open);
+  };
   return (
     <div>
        
-      <div className="shadow-md w-full   top-0 left-0">
+     <div className="shadow-md w-full top-0 left-0">
         <div className="md:flex md:justify-between md:items-center bg-white py-4">
           <div>
-           <h1 className="text-3xl font-bold pl-7 md:ml-10"> Flavorsome</h1>
+            <h1 className="text-3xl font-bold pl-7 md:ml-10">Flavorsome</h1>
           </div>
-          <div onClick={()=>setOpen(!open)} className="absolute text-2xl top-6 right-8 cursor-pointer md:hidden">
-           {open? <h1><AiOutlineClose/></h1>:
-            <h1> <AiOutlineMenu/></h1>}
+          <div
+            onClick={toggleMenu}
+            className="absolute text-2xl top-6 right-8 cursor-pointer md:hidden"
+          >
+            {open ? <AiOutlineClose /> : <AiOutlineMenu />}
           </div>
           <div>
-            <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white lg:mr-40 md:mr-14 md:z-auto z-[-1] w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in left-0 ${open ? 'top-16 ' : 'top-[-490px]'} `}>
-              
+            <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static
+             bg-white lg:mr-40 md:mr-14  w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in left-0 ${open ? 'block' : 'hidden'}`}>
               <li>
-             
-             
-      </li>
-              <li>
-              <Link className="ml-4 top-19" href="/">Home</Link>
-             
-      </li>
-      <li className="ml-4">
-         <Link href="/contact">
-              Contact</Link>
-      </li>
-      <li className="ml-4">
-         <Link href="/menu">
-              Menu</Link>
-      </li>
-      <li className="ml-4">
-         <Link href="/login">
-              Login</Link>
-      </li>
+                <Link className="ml-4" href="/">Home</Link>
+              </li>
+              <li className="ml-4">
+                <Link href="/contact">Contact</Link>
+              </li>
+              <li className="ml-4">
+                <Link href="/menu">Menu</Link>
+              </li>
+              {user ?<li onClick={logout} className="ml-4">
+                Log Out
+              </li> :<li  className="ml-4 hover:cursor-pointer">
+               <Link href="/login">Login</Link>
+              </li>
+                
+              }
               
             </ul>
-            </div>
+            {/* {
+                drop && < ul className="absolute bg-white right-0  top-2 flex-col">
+                  <li >login</li> <br />
+                  <li>signout</li>
+                
+                </ul>
+                } */}
+          </div>
         </div>
-     </div>
+      </div>
       <div >{children}</div>
       <footer className="footer p-10 bg-neutral text-neutral-content">
   <nav>

@@ -1,4 +1,5 @@
 import auth from "@/firebase/firebase.config";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 
@@ -51,7 +52,8 @@ const Login = () => {
                     <div className="flex justify-center">
             <input  className="px-14 cursor-pointer py-2 border-2 border-black  text-white mt-8 bg-black hover:text-black hover:bg-white" type="submit" />
           </div>
-                </form>
+          </form>
+          <p className="my-4">New Flavorsome <Link href='/login/registration'><span className="text-blue-500">Sign Up</span></Link></p>
             </div>
         </div>
     );

@@ -25,8 +25,32 @@ const BookTable = () => {
         const schedule = e?.target?.schedule?.value;
         const date = e?.target?.date?.value;
         const person = e?.target?.person?.value;
-        console.log(email, schedule, date, person, 'handlebook');
-        toast.success("book a table");
+         const booktable = {
+             email: email,
+             schedule: schedule,
+             date: date,
+            person:person
+         }
+         console.log(booktable);
+         fetch(`http://localhost:5000/book`,{
+            method:'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(booktable)
+    })
+      .then(res => res.json())
+      .then(data => {
+       
+            if(data){
+                toast.success("book a table")
+              
+            }
+            else{
+               toast.error('Oh no try again later')
+            }
+        })
+        
     };
     return (
         <div className="container mx-auto">
