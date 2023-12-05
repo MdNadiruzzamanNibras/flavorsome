@@ -1,3 +1,4 @@
+import RootLayout from '@/Component/layout/RootLayout';
 import auth from '@/firebase/firebase.config';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -88,3 +89,7 @@ const Registration = () => {
 };
 
 export default Registration;
+
+Registration.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};

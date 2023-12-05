@@ -1,6 +1,7 @@
+import DashBoard from "@/Component/layout/DashBoard";
 
 
-const Dashboard = () => {
+const DashboardPage = () => {
     return (
         <div>
             <h1>this is dashboard</h1>
@@ -8,4 +9,9 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default DashboardPage;
+
+
+DashboardPage.getLayout = function getLayout(page) {
+    return <DashBoard>{ page}</DashBoard>
+};
