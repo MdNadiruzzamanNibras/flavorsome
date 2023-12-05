@@ -50,6 +50,7 @@ const Registration = () => {
      if (user) {
     router.replace(location);
   }
+  console.log(user);
     
     return (
         <div className="flex justify-center items-center h-screen">

@@ -8,8 +8,8 @@ const DashBoard = ({children}) => {
                 <div className=" flex flex-col text-center mt-5">
                     <h1><Link href='/'>home</Link></h1>
                     <h1><Link href='/dashboard'>Profile</Link></h1>
-                    <h1><Link href='/dashboard/book'>home</Link></h1>
-                    <h1><Link href='/'>home</Link></h1>
+                    <h1><Link href='/dashboard/book'>Book Table</Link></h1>
+                    <h1><Link href='/dashboard/review'>Review</Link></h1>
                     <h1><Link href='/'>home</Link></h1>
             </div>
             
