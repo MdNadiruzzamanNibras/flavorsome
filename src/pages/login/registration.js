@@ -25,7 +25,7 @@ const Registration = () => {
          const user= { name : name,
                     email: email
     }
-    fetch('http://localhost:5000/user',{
+    fetch('https://encouraging-pants-dog.cyclic.app/user',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -80,8 +80,7 @@ const Registration = () => {
             <input  className="px-14 cursor-pointer py-2 border-2 border-black  text-white mt-8 bg-black hover:text-black hover:bg-white" type="submit" />
           </div>
           </form>
-          <p className="my-4">Already Account
-            <Link href='/login'><span className="text-blue-500">Sign In</span></Link></p>
+          <p className="my-4 ">Already Account <Link href='/login'><span className="text-blue-500 pl-2">Sign In</span></Link></p>
                 <ToastContainer/>
             </div>
         </div>

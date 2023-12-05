@@ -32,7 +32,7 @@ const BookTable = () => {
             person:person
          }
          console.log(booktable);
-         fetch(`http://localhost:5000/book`,{
+         fetch(`https://encouraging-pants-dog.cyclic.app/book`,{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
