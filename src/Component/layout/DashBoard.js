@@ -9,6 +9,7 @@ const DashBoard = ({children}) => {
                     <h1><Link href='/'>home</Link></h1>
                     <h1><Link href='/dashboard'>Profile</Link></h1>
                     <h1><Link href='/dashboard/book'>Book Table</Link></h1>
+                    <h1><Link href='/dashboard/addfood'>Add Food</Link></h1>
                     <h1><Link href='/dashboard/review'>Review</Link></h1>
                     <h1><Link href='/'>home</Link></h1>
             </div>

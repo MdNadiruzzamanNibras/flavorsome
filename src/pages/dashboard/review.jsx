@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 const AddReview = () => {
     const [user] = useAuthState(auth);
-    console.log(user, "kdius");
+    console.log(user);
     const handleReview = (e) => {
         e.preventDefault();
        
@@ -32,20 +32,16 @@ const AddReview = () => {
     }
     return (
         <div className="container mx-auto">
-            <div className=" w-full h-screen">
-                <form onSubmit={handleReview}>
-                   <div className="flex flex-col">
-            <label className="label">
-              <span className="text-base text-black font-bold">Name</span>
-            </label>
-            <input type="text" required  value={user?.displayName} placeholder="Your Name" name="name" className="text-center py-2 w-80 my-2 focus:outline-none rounded border-gray-500 border-2 "  />
-            
-          </div>
+            <div className=" flex justify-center h-screen">
+                <div className=" w-full lg:w-[400px]  px-7 mt-20 h-fit">
+                    <h1>Write Your Opinion About </h1>
+                    <form onSubmit={handleReview}>
+                   
                    <div className="flex flex-col">
             <label className="label">
               <span className="text-base text-black font-bold">Review</span>
             </label>
-            <textarea type="text" required placeholder="Your review" name="review" className="text-center py-2 w-80 my-2 focus:outline-none rounded border-gray-500 border-2 "  />
+            <textarea type="text" required placeholder="Your review" name="review" className="text-center py-2 w-80 h-44 my-2 focus:outline-none rounded border-gray-500 border-2 "  />
             
           </div>
                    <div className="flex flex-col">
@@ -55,10 +51,11 @@ const AddReview = () => {
             <input type="text" required placeholder="Your Name" name="image" className="text-center py-2 w-80 my-2 focus:outline-none rounded border-gray-500 border-2 "  />
             
                     </div>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center" >
             <input  className="px-14 cursor-pointer py-2 border-2 border-black  text-white mt-8 bg-black hover:text-black hover:bg-white" type="submit" />
           </div>
                 </form>
+                </div>
             </div>
         </div>
     );

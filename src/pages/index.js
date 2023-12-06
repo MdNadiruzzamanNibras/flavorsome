@@ -3,7 +3,7 @@ import CountAll from "@/Component/Home/CountAll";
 import HeroAfter from "@/Component/Home/HeroAfter";
 import RootLayout from "@/Component/layout/RootLayout";
 import Image from "next/image";
-import banner from '../../public/images/banner/banner.jpg'
+import banner from '../../public/images/banner/banner-bg-two.jpg'
 import Menu from "@/Component/Home/Menu";
 import Master_Chef from "@/Component/Home/Master_Chef";
 import BookTable from "@/Component/Home/BookTable";

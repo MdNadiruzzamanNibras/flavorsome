@@ -9,21 +9,23 @@ const HeroAfter = () => {
             <div className="lg:flex mr-4">
                 <Image
   src={chef}
- className="lg:w-64 lg:h-[450px] mt-10"
+ className=" mx-auto lg:mx-0 w-96 lg:w-64 lg:h-[450px] mt-10"
   alt="main chef"
 />
                 <Image
   src={an}
-  className="lg:w-64  lg:h-[450px] mx-3"
+  className="w-96 lg:w-64  lg:h-[450px] mx-auto mt-8 lg:mt-0 lg:mx-3"
   alt="main chef"
 />
             </div>
-            <div>
+                <div className="flex justify-center ">
+                    <div>
                 {/* <h2>about</h2> */}
                 <h1 className="font-bold  lg:text-5xl md:text-2xl lg:mt-20 ">Flavorsome <br /> Restaurant</h1>
                 <p className="w-96 lg:font-medium lg:text-xl lg:mt-8">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                 <p className="w-96 lg:font-medium lg:text-xl lg:my-8">Mon - Fri <span className="font-bold">8 AM - 11 PM</span></p>
                 <h4 style={{color:"#D1B000"}} className="font-bold  lg:text-5xl md:text-2xl ">+ 1-978-123-4567</h4>
+            </div>
             </div>
         </div>
         </div>
