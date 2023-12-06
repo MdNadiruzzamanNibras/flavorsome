@@ -32,7 +32,7 @@ const AddMenu = () => {
   return (
     <div className="container mx-auto">
       <div className="flex justify-center">
-        <div className="lg:w-[500px] border-2 bg-slate-200 shadow-lg shadow-  mt-14">
+        <div className="lg:w-[500px] border-2  shadow-lg shadow-  mt-14">
           <h1 className="text-center text-3xl font-bold">Add Menu</h1>
           <form onSubmit={handleFood}>
             <div className="flex flex-col ml-0 lg:ml-5 ">
