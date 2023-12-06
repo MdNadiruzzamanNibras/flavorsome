@@ -50,7 +50,7 @@ export const getServerSideProps = async () => {
   try {
     const [menuRes, reviewRes] = await Promise.all([
       fetch("https://encouraging-pants-dog.cyclic.app/menus"),
-      fetch("http://localhost:5000/allreview"),
+      fetch("https://encouraging-pants-dog.cyclic.app/allreview"),
     ]);
 
     const [menuData, reviews] = await Promise.all([
