@@ -3,7 +3,7 @@ import CountAll from "@/Component/Home/CountAll";
 import HeroAfter from "@/Component/Home/HeroAfter";
 import RootLayout from "@/Component/layout/RootLayout";
 import Image from "next/image";
-import banner from '../../public/images/banner/banner-bg-two.jpg'
+import banner from "../../public/images/banner/banner-bg-two.jpg";
 import Menu from "@/Component/Home/Menu";
 import Master_Chef from "@/Component/Home/Master_Chef";
 import BookTable from "@/Component/Home/BookTable";
@@ -11,20 +11,19 @@ import HappyClient from "@/Component/Home/HappyClient";
 import RecentPost from "@/Component/Home/RecentPost";
 import OurStory from "@/Component/Home/OurStory";
 import FoodPHILOSOPHY from "@/Component/Home/FoodPHILOSOPHY";
-const Home = ({ menuData }) => {
-  
+const Home = ({ menuData, reviews }) => {
+  console.log(reviews, "review");
   return (
     <div>
       <div>
         <Image
-  src={banner}
-  style={{ width: '100%', height: '70vh' }}
-  alt="Picture of the author"
-/>
-
+          src={banner}
+          style={{ width: "100%", height: "70vh" }}
+          alt="Picture of the author"
+        />
       </div>
-      
-        <div className=" mx-auto">
+
+      <div className=" mx-auto">
         <HeroAfter></HeroAfter>
         <CountAll></CountAll>
         <OurStory></OurStory>
@@ -33,11 +32,10 @@ const Home = ({ menuData }) => {
         <Menu menuData={menuData}></Menu>
         <Master_Chef></Master_Chef>
         <BookTable></BookTable>
-        <HappyClient></HappyClient>
+        <HappyClient reviews={reviews}></HappyClient>
         <RecentPost></RecentPost>
-      {/* </div> */}
+        {/* </div> */}
       </div>
-      
     </div>
   );
 };
@@ -49,18 +47,30 @@ Home.getLayout = function getLayout(page) {
 };
 
 export const getServerSideProps = async () => {
-  const res = await fetch("https://encouraging-pants-dog.cyclic.app/menus");
-  const data = await res.json();
+  try {
+    const [menuRes, reviewRes] = await Promise.all([
+      fetch("https://encouraging-pants-dog.cyclic.app/menus"),
+      fetch("http://localhost:5000/allreview"),
+    ]);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    const [menuData, reviews] = await Promise.all([
+      menuRes.ok ? menuRes.json() : [],
+      reviewRes.ok ? reviewRes.json() : [],
+    ]);
+    console.log(reviews, "kdi");
+    return {
+      props: {
+        menuData,
+        reviews,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        menuData: [],
+        reviews: [],
+      },
+    };
   }
-
-  return {
-    props: {
-      menuData: data,
-    },
-  };
 };
-
-
