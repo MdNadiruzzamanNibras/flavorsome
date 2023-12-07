@@ -31,7 +31,7 @@ const BookTable = () => {
       date: date,
       person: person,
     };
-    console.log(booktable);
+
     fetch(`https://encouraging-pants-dog.cyclic.app/book`, {
       method: "POST",
       headers: {

@@ -11,13 +11,13 @@ import "react-toastify/dist/ReactToastify.css";
 
 const AddReview = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
+
   const handleReview = (e) => {
     e.preventDefault();
 
     const review = e.target.review.value;
     const image = e.target.image.value;
-    console.log(review, image);
+
     const reviewdata = {
       name: user.displayName,
       review: review,

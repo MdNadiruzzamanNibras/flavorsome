@@ -5,9 +5,7 @@ import man_tw from "../../../public/images/avatar/image_2.jpg";
 
 import Image from "next/image";
 const HappyClient = ({ reviews }) => {
-  console.log(reviews, "line 32");
   const reversereviews = [...reviews].reverse();
-  console.log(reversereviews, "kdkkdk");
 
   return (
     <div className="container mx-auto">

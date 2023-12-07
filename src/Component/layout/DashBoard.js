@@ -24,7 +24,7 @@ const DashBoard = ({ children }) => {
                 </Link>
               </h1>
               <h1>
-                <Link className="my-3" href="/dashboard/book">
+                <Link className="my-3" href="/dashboard/mybook">
                   Book Table
                 </Link>
               </h1>
@@ -38,7 +38,7 @@ const DashBoard = ({ children }) => {
               </Link>
             </h1>
             <h1>
-              <Link className="my-3" href="/dashboard/mybook">
+              <Link className="my-3" href="/dashboard/book">
                 Book Table
               </Link>
             </h1>

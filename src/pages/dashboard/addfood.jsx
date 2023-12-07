@@ -16,7 +16,6 @@ const AddMenu = () => {
       description: description,
     };
 
-    console.log(menudata, "129");
     fetch("http://localhost:5000/addFood", {
       method: "POST",
       headers: {
@@ -25,9 +24,7 @@ const AddMenu = () => {
       body: JSON.stringify(menudata),
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "28 line data");
-      });
+      .then((data) => {});
   };
   return (
     <div className="container mx-auto">

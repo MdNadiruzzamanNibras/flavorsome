@@ -2,15 +2,19 @@ import auth from "@/firebase/firebase.config";
 import { signOut } from "firebase/auth";
 import Link from "next/link";
 import { useState } from "react";
+import { useCookies } from "react-cookie";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const RootLayout = ({ children }) => {
   const [user] = useAuthState(auth);
   const [open, setOpen] = useState(false);
+  const [cookies, setCookie, removeCookie] = useCookies(["userEmail"]);
 
   const logout = () => {
     signOut(auth);
+
+    removeCookie("userEmail", { path: "/" });
   };
   const toggleMenu = () => {
     setOpen(!open);

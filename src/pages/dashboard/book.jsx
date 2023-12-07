@@ -1,7 +1,6 @@
 import DashBoard from "@/Component/layout/DashBoard";
 
 const Book = ({ books }) => {
-  console.log(books);
   return (
     <div className="container mx-auto">
       <div className="overflow-x-auto">

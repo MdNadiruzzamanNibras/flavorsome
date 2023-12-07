@@ -12,7 +12,6 @@ import RecentPost from "@/Component/Home/RecentPost";
 import OurStory from "@/Component/Home/OurStory";
 import FoodPHILOSOPHY from "@/Component/Home/FoodPHILOSOPHY";
 const Home = ({ menuData, reviews }) => {
-  console.log(reviews, "review");
   return (
     <div>
       <div>
@@ -57,7 +56,7 @@ export const getServerSideProps = async () => {
       menuRes.ok ? menuRes.json() : [],
       reviewRes.ok ? reviewRes.json() : [],
     ]);
-    console.log(reviews, "kdi");
+
     return {
       props: {
         menuData,
