@@ -4,10 +4,10 @@ const Book = ({ books }) => {
   return (
     <div className="container mx-auto">
       <div className="overflow-x-auto">
-        <table className="table w-full">
+        <table className="table mt-20 w-full">
           <thead>
-            <tr>
-              <th></th>
+            <tr className="bg-black text-white text-xl text-center">
+              <th>NO.</th>
               <th>Name</th>
               <th>Email</th>
               <th>Persons</th>
@@ -17,7 +17,7 @@ const Book = ({ books }) => {
           </thead>
           <tbody>
             {books.map((book, index) => (
-              <tr key={book._id}>
+              <tr key={book._id} className="text-center text-lg">
                 <th>{index + 1}</th>
                 <td>{book?.name}</td>
                 <td>{book?.email}</td>

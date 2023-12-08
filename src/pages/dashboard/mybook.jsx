@@ -4,9 +4,9 @@ const MYBook = ({ books }) => {
   return (
     <div className="container mx-auto">
       <div className="overflow-x-auto">
-        <table className="table w-full">
+        <table className="table mt-20 w-full">
           <thead>
-            <tr>
+            <tr className="bg-black text-white text-xl text-center">
               <th></th>
               <th>Name</th>
               <th>Email</th>
@@ -17,7 +17,7 @@ const MYBook = ({ books }) => {
           </thead>
           <tbody>
             {books?.map((book, index) => (
-              <tr key={book._id}>
+              <tr key={book._id} className="text-center text-lg">
                 <th>{index + 1}</th>
                 <td>{book?.name}</td>
                 <td>{book?.email}</td>
@@ -44,13 +44,14 @@ export const getServerSideProps = async ({ req }) => {
       .split(";")
       .find((cookie) => cookie.trim().startsWith("userEmail="))
       ?.split("=")[1];
-
-    if (!userEmail) {
+    const decodedEmail = decodeURIComponent(userEmail);
+    console.log(decodedEmail, "decodedEmail");
+    if (!decodedEmail) {
       throw new Error("User email not found");
     }
 
     // Use userEmail to fetch data from your API or database
-    const res = await fetch(`http://localhost:5000/mybook/${userEmail}`);
+    const res = await fetch(`http://localhost:5000/mybook/${decodedEmail}`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch data");

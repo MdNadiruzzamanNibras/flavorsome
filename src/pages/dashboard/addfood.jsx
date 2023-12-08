@@ -1,5 +1,6 @@
 import DashBoard from "@/Component/layout/DashBoard";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const AddMenu = () => {
   const handleFood = (e) => {
     e.preventDefault();
@@ -24,7 +25,13 @@ const AddMenu = () => {
       body: JSON.stringify(menudata),
     })
       .then((res) => res.json())
-      .then((data) => {});
+      .then((data) => {
+        if (data) {
+          toast.success("Add menu item");
+        } else {
+          toast.error("Oh no try again later");
+        }
+      });
   };
   return (
     <div className="container mx-auto">
@@ -94,6 +101,7 @@ const AddMenu = () => {
               />
             </div>
           </form>
+          <ToastContainer />
         </div>
       </div>
     </div>

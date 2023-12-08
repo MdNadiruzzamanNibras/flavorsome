@@ -1,3 +1,4 @@
+import DashBoard from "@/Component/layout/DashBoard";
 import Image from "next/image";
 import fetch from "node-fetch";
 
@@ -28,7 +29,7 @@ const MyOrder = ({ orders }) => {
                   />
                 </td>
                 <td>{order?.name}</td>
-                <td>{order?.quantity}</td>
+                <td>{order?.qunatity}</td>
                 <td>{order?.price}</td>
               </tr>
             ))}
@@ -40,22 +41,23 @@ const MyOrder = ({ orders }) => {
 };
 
 export default MyOrder;
-
+MyOrder.getLayout = function getLayout(page) {
+  return <DashBoard>{page}</DashBoard>;
+};
 export const getServerSideProps = async ({ req }) => {
   try {
     const userEmail = req.headers.cookie
       ?.split(";")
       .find((cookie) => cookie.trim().startsWith("userEmail="))
       ?.split("=")[1];
-    console.log(userEmail, "myoo");
-    if (!userEmail) {
+    const decodedEmail = decodeURIComponent(userEmail);
+    console.log(decodedEmail, "decodedEmail");
+    if (!decodedEmail) {
       throw new Error("User email not found");
     }
 
     // Use userEmail to fetch data from your API or database
-    const apiUrl = `http://localhost:5000/mybook/${encodeURIComponent(
-      userEmail
-    )}`;
+    const apiUrl = `http://localhost:5000/myorder/${decodedEmail}`;
     const res = await fetch(apiUrl);
 
     if (!res.ok) {
@@ -63,7 +65,7 @@ export const getServerSideProps = async ({ req }) => {
     }
 
     const orders = await res.json();
-
+    console.log(orders);
     return {
       props: {
         orders,

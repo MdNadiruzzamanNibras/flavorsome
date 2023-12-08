@@ -2,18 +2,22 @@
 import DashBoard from "@/Component/layout/DashBoard";
 import useAdmin from "@/Hook/useAdmin";
 import auth from "@/firebase/firebase.config";
+import { useRouter } from "next/navigation";
 import { useAuthState } from "react-firebase-hooks/auth";
 // import Avatar from "react-avatar";
 
 const ProfilePage = ({ personaldata }) => {
   const [user, loading] = useAuthState(auth);
-
+  const router = useRouter();
   if (!user && loading) {
     return <p>loading...</p>;
   }
 
   const firstWord = personaldata?.name?.trim()?.charAt(0);
 
+  const handleUpdate = () => {
+    router.push("/dashboard/update");
+  };
   const styles = {
     fontFamily: "'Dhurjati', 'Lato', 'Poppins', 'Roboto Slab', sans-serif",
   };
@@ -27,7 +31,7 @@ const ProfilePage = ({ personaldata }) => {
                 <h4 style={styles} className="text-3xl">
                   Hey!!!
                 </h4>
-                <h4 style={styles} className="text-3xl">
+                <h4 style={styles} className="text-3xl capitalize">
                   {personaldata?.name}
                 </h4>
               </div>
@@ -47,11 +51,20 @@ const ProfilePage = ({ personaldata }) => {
                     {firstWord}
                   </h1>
                 </div>
+                <div>
+                  <button
+                    onClick={handleUpdate}
+                    className="px-8 rounded-md text-lg font-medium cursor-pointer py-2 border-2 border-black
+             text-white mt-2 bg-black hover:text-black hover:bg-white"
+                  >
+                    Edit
+                  </button>
+                </div>
               </div>
               <div className="ml-10 mt-8">
                 <div className="flex flex-col  ">
                   <h5 className="text-lg font-semibold">Name:</h5>
-                  <h5 className="text-xl font-bold">
+                  <h5 className="text-xl capitalize font-bold">
                     {personaldata?.name ? personaldata?.name : "------"}
                   </h5>
                 </div>
