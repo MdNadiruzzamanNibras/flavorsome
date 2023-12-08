@@ -46,7 +46,7 @@ Order.getLayout = function getLayout(page) {
   return <DashBoard>{page}</DashBoard>;
 };
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:5000/order");
+  const res = await fetch("https://encouraging-pants-dog.cyclic.app/order");
   const data = await res.json();
 
   if (!res.ok) {

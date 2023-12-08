@@ -112,7 +112,9 @@ export const getServerSideProps = async ({ req }) => {
       throw new Error("User email not found");
     }
 
-    const res = await fetch(`http://localhost:5000/profile/${userEmail}`);
+    const res = await fetch(
+      `https://encouraging-pants-dog.cyclic.app/profile/${userEmail}`
+    );
 
     const personaldata = await res.json();
     console.log(personaldata, "kdkd");

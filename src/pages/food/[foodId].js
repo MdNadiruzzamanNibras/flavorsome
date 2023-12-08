@@ -24,7 +24,7 @@ const foodDetail = ({ food }) => {
       qunatity: qunatity,
       price: price * qunatity,
     };
-    fetch(`http://localhost:5000/order`, {
+    fetch(`https://encouraging-pants-dog.cyclic.app/order`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -8,10 +8,10 @@ const useAdmin = (user) => {
     const email = user?.email;
     if (email) {
       setAdminLoading(true);
-      fetch(`http://localhost:5000/admin/${email}`, {
-        method: 'GET',
+      fetch(`https://encouraging-pants-dog.cyclic.app/admin/${email}`, {
+        method: "GET",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
       })
         .then((res) => res.json())

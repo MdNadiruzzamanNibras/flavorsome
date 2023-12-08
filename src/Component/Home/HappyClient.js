@@ -34,7 +34,9 @@ const HappyClient = ({ reviews }) => {
               </p>
               <h4 className=" flex items-center">
                 <HiOutlineMinus />{" "}
-                <span className="text-2xl font-semibold">{review?.name}</span>
+                <span className="text-2xl capitalize font-semibold">
+                  {review?.name}
+                </span>
               </h4>
             </div>
           ))}

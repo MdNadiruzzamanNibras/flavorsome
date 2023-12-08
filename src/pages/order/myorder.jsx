@@ -51,13 +51,13 @@ export const getServerSideProps = async ({ req }) => {
       .find((cookie) => cookie.trim().startsWith("userEmail="))
       ?.split("=")[1];
     const decodedEmail = decodeURIComponent(userEmail);
-    console.log(decodedEmail, "decodedEmail");
+
     if (!decodedEmail) {
       throw new Error("User email not found");
     }
 
     // Use userEmail to fetch data from your API or database
-    const apiUrl = `http://localhost:5000/myorder/${decodedEmail}`;
+    const apiUrl = `https://encouraging-pants-dog.cyclic.app/myorder/${decodedEmail}`;
     const res = await fetch(apiUrl);
 
     if (!res.ok) {

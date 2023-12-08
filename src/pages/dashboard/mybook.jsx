@@ -51,7 +51,9 @@ export const getServerSideProps = async ({ req }) => {
     }
 
     // Use userEmail to fetch data from your API or database
-    const res = await fetch(`http://localhost:5000/mybook/${decodedEmail}`);
+    const res = await fetch(
+      `https://encouraging-pants-dog.cyclic.app/mybook/${decodedEmail}`
+    );
 
     if (!res.ok) {
       throw new Error("Failed to fetch data");

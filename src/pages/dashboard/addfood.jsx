@@ -17,7 +17,7 @@ const AddMenu = () => {
       description: description,
     };
 
-    fetch("http://localhost:5000/addFood", {
+    fetch("https://encouraging-pants-dog.cyclic.app/addFood", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

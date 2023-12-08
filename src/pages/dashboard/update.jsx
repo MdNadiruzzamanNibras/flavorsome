@@ -23,7 +23,7 @@ const UpdateProfile = () => {
       address: address,
     };
 
-    fetch(`http://localhost:5000/update/${user?.email}`, {
+    fetch(`https://encouraging-pants-dog.cyclic.app/update/${user?.email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -41,7 +41,10 @@ const UpdateProfile = () => {
   };
   return (
     <div className="container mx-auto">
-      <div className="card w-96 mx-auto bg-base-100 shadow-xl">
+      <div className="card w-96  mt-20 mx-auto bg-base-100 shadow-xl">
+        <h1 className="text-2xl font-bold text-center mt-4">
+          Update your profile
+        </h1>
         <div className="card-body" onSubmit={handleupdate}>
           <form>
             <input

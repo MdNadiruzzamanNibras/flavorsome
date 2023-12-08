@@ -44,6 +44,11 @@ const RootLayout = ({ children }) => {
                   Home
                 </Link>
               </li>
+              {user && (
+                <li className="ml-4">
+                  <Link href="/dashboard">DashBoard</Link>
+                </li>
+              )}
               <li className="ml-4">
                 <Link href="/contact">Contact</Link>
               </li>
