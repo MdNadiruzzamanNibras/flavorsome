@@ -87,8 +87,8 @@ const AddMenu = () => {
             </div>
             <div className="flex justify-center">
               <input
-                className="px-48 cursor-pointer py-2 border-2 border-orange-600 
-             text-white mt-8 bg-orange-600 hover:text-orange-600 hover:bg-white"
+                className="px-48 cursor-pointer py-2 border-2 border-black
+             text-white mt-8 bg-black hover:text-black hover:bg-white"
                 value="Add Food"
                 type="submit"
               />
