@@ -5,9 +5,11 @@ const Menu = ({ menuData }) => {
   return (
     <div className="container mx-auto">
       <div className="my-20  ">
-        <h1 className="text-4xl font-extrabold text-center my-7">Our Menu</h1>
+        <h1 className="text-4xl font-extrabold mr-44 text-center my-7">
+          Our Menu
+        </h1>
 
-        <div className="grid grid-cols-1 ml-24 lg:ml-0 md:grid-cols-2  gap-5 ">
+        <div className="grid grid-cols-1 ml-24 lg:ml-20 md:grid-cols-2  gap-5 ">
           {menuData.slice(0, 4).map((food) => (
             <div
               key={food._id}
