@@ -22,7 +22,11 @@ const RootLayout = ({ children }) => {
   return (
     <div>
       <div className="shadow-md w-full top-0 left-0">
-        <div className="md:flex md:justify-between md:items-center pb-36 md:pb-0 bg-white py-4">
+        <div
+          className={`md:flex md:justify-between md:items-center  md:pb-5 bg-white py-4 ${
+            open ? "pb-36" : "pb-3"
+          }`}
+        >
           <div>
             <h1 className="text-3xl font-bold pl-7 md:ml-10">Flavorsome</h1>
           </div>
@@ -35,9 +39,8 @@ const RootLayout = ({ children }) => {
           <div>
             <ul
               className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static
-             bg-white lg:mr-40 md:mr-14  w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in left-0 ${
-               open ? "block" : "hidden"
-             }`}
+             bg-white lg:mr-40 md:mr-14  w-full md:w-auto md:pl-0 pl-9 transition-all
+              duration-500 ease-in left-0 ${open ? "block" : "hidden"}`}
             >
               <li>
                 <Link className="ml-4" href="/">

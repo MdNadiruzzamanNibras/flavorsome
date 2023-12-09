@@ -11,24 +11,26 @@ import HappyClient from "@/Component/Home/HappyClient";
 import RecentPost from "@/Component/Home/RecentPost";
 import OurStory from "@/Component/Home/OurStory";
 import FoodPHILOSOPHY from "@/Component/Home/FoodPHILOSOPHY";
+// import Banner from "@/Component/Home/Banner";
 const Home = ({ menuData, reviews }) => {
   return (
     <div>
+      {/* <Banner /> */}
       <div>
         <div className="relative">
           <Image
             src={banner}
-            style={{ width: "100%", height: "70vh" }}
+            style={{ width: "100wv", height: "70vh" }}
             alt="Picture of the author"
           />
         </div>
         <div className="container mx-auto px-2">
-          <h1 className="absolute text-white text-4xl md:text-6xl font-extrabold lg:ml-40 mt-[-500px]">
+          <h1 className="absolute text-white text-4xl md:text-6xl mt-[-400px] md:mt-[-500px] font-extrabold lg:ml-40 lg:mt-[-400px]">
             <span>Crafting your</span> <br /> <span>Exceptional Dining</span>{" "}
             <br />
             <span>Reservations</span>
           </h1>
-          <p className="text-white  absolute mt-[-250px] lg:mt-[-300px] lg:ml-40">
+          <p className="text-white  absolute mt-[-230px] lg:mt-[-200px]  md:mt-[-300px] lg:ml-40">
             Reservation is a step into a world of gastronomic wonder. Reserve
             your table today <br className="hidden lg:block" /> and let us paint
             your culinary dreams into reality.
