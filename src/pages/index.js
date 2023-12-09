@@ -20,17 +20,19 @@ const Home = ({ menuData, reviews }) => {
         <div className="relative">
           <Image
             src={banner}
-            style={{ width: "100wv", height: "70vh" }}
+            style={{ width: "100vw", height: "70vh" }}
             alt="Picture of the author"
           />
         </div>
-        <div className="container mx-auto px-2">
-          <h1 className="absolute text-white text-4xl md:text-6xl mt-[-400px] md:mt-[-500px] font-extrabold lg:ml-40 lg:mt-[-400px]">
+        <div className="absolute   text-white mt-[-400px]  lg:ml-52 mx-10 md:mt-[-500px]  lg:mt-[-400px]">
+          {/* <h1 className="absolute  text-4xl   md:mt-[-500px]  lg:ml-40 lg:mt-[-400px]"> */}
+          <h1 className="text-4xl font-extrabold md:text-6xl">
             <span>Crafting your</span> <br /> <span>Exceptional Dining</span>{" "}
             <br />
             <span>Reservations</span>
           </h1>
-          <p className="text-white  absolute mt-[-230px] lg:mt-[-200px]  md:mt-[-300px] lg:ml-40">
+          {/* <p className="text-white  absolute mt-[-230px] lg:mt-[-200px]  md:mt-[-300px] lg:ml-40"> */}
+          <p className="mt-6 lg:text-lg lg:font-medium">
             Reservation is a step into a world of gastronomic wonder. Reserve
             your table today <br className="hidden lg:block" /> and let us paint
             your culinary dreams into reality.
