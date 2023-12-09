@@ -22,7 +22,7 @@ const RootLayout = ({ children }) => {
   return (
     <div>
       <div className="shadow-md w-full top-0 left-0">
-        <div className="md:flex md:justify-between md:items-center bg-white py-4">
+        <div className="md:flex md:justify-between md:items-center pb-36 md:pb-0 bg-white py-4">
           <div>
             <h1 className="text-3xl font-bold pl-7 md:ml-10">Flavorsome</h1>
           </div>
