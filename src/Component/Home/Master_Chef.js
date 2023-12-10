@@ -9,100 +9,55 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 
 const Master_Chef = () => {
+  const masterCheh = [
+    { id: 1, name: "John Smooth", position: "Restaurant Owner", image: owner },
+    {
+      id: 2,
+      name: "Rebeca Welson",
+      position: "Head Chef",
+      image: master,
+    },
+    { id: 3, name: "Kharl Branyt", position: "Chef", image: chef_one },
+
+    { id: 4, name: "Luke Simon", position: "Chef", image: chef_two },
+  ];
   return (
     <div className="my-16 container mx-auto">
       <h1 className="text-center text-4xl my-24 mr-20 font-extrabold">
         Our Master Chef
       </h1>
-      <div className="grid lg:grid-cols-4  md:grid-cols-2 sm:grid-cols-1 gap-3">
-        <div className="w-64 mx-auto  md:ml-10 lg:ml-0 ">
-          <Image src={owner} className="w-64 h-80 shadow-md " alt="owner" />
-          <h4 className="text-xl font-bold ml-3 my-2">John Smooth</h4>
-          <p className="ml-3">Restaurant Owner</p>
+      <div className="grid lg:grid-cols-4 lg:ml-10 md:grid-cols-2 sm:grid-cols-1 gap-3">
+        {masterCheh?.map((chef) => (
           <div
-            className="flex items-center  ml-2 mt-3"
-            style={{ color: "#c8a97e" }}
+            key={chef.id}
+            className="w-80 md:w-64 mx-auto mt-2 md:ml-10 lg:ml-0 "
           >
-            <a href="" className="mr-3 text-3xl">
-              <LiaTwitter />
-            </a>
-            <a href="" className="mr-3 text-xl">
-              <FaFacebookF />
-            </a>
-            <a href="" className="mr-3 text-2xl">
-              <AiOutlineGoogle />
-            </a>
-            <a href="" className="mr-3 text-2xl">
-              <BsInstagram />
-            </a>
+            <Image
+              src={chef.image}
+              className=" w-80 md:w-64 h-96 lg:h-80 shadow-md "
+              alt="owner"
+            />
+            <h4 className="text-xl font-bold ml-3 my-2">{chef.name}</h4>
+            <p className="ml-3">{chef.position}</p>
+            <div
+              className="flex items-center  ml-2 mt-3"
+              style={{ color: "#c8a97e" }}
+            >
+              <a href="" className="mr-3 text-3xl">
+                <LiaTwitter />
+              </a>
+              <a href="" className="mr-3 text-xl">
+                <FaFacebookF />
+              </a>
+              <a href="" className="mr-3 text-2xl">
+                <AiOutlineGoogle />
+              </a>
+              <a href="" className="mr-3 text-2xl">
+                <BsInstagram />
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="w-64  mx-auto  md:ml-10 lg:ml-0">
-          <Image src={master} className="w-64 h-80 shadow-md " alt="owner" />
-          <h4 className="text-xl font-bold ml-3 my-2">Rebeca Welson</h4>
-          <p className="ml-3">Head Chef</p>
-          <div
-            className="flex items-center  ml-2 mt-3"
-            style={{ color: "#c8a97e" }}
-          >
-            <a href="" className="mr-3 text-3xl">
-              <LiaTwitter />
-            </a>
-            <a href="" className="mr-3 text-xl">
-              <FaFacebookF />
-            </a>
-            <a href="" className="mr-3 text-2xl">
-              <AiOutlineGoogle />
-            </a>
-            <a href="" className="mr-3 text-2xl">
-              <BsInstagram />
-            </a>
-          </div>
-        </div>
-        <div className="w-64  mx-auto  md:ml-10 lg:ml-0">
-          <Image src={chef_one} className="w-64 h-80 shadow-md " alt="owner" />
-          <h4 className="text-xl font-bold ml-3 my-2">Kharl Branyt</h4>
-          <p className="ml-3">Chef</p>
-          <div
-            className="flex items-center  ml-2 mt-3"
-            style={{ color: "#c8a97e" }}
-          >
-            <a href="" className="mr-3 text-3xl">
-              <LiaTwitter />
-            </a>
-            <a href="" className="mr-3 text-xl">
-              <FaFacebookF />
-            </a>
-            <a href="" className="mr-3 text-2xl">
-              <AiOutlineGoogle />
-            </a>
-            <a href="" className="mr-3 text-2xl">
-              <BsInstagram />
-            </a>
-          </div>
-        </div>
-        <div className="w-64 mx-auto  md:ml-10 lg:ml-0 ">
-          <Image src={chef_two} className="w-64 h-80 shadow-md " alt="owner" />
-          <h4 className="text-xl font-bold ml-3 my-2">Luke Simon</h4>
-          <p className="ml-3">Chef</p>
-          <div
-            className="flex items-center  ml-2 mt-3"
-            style={{ color: "#c8a97e" }}
-          >
-            <a href="" className="mr-3 text-3xl">
-              <LiaTwitter />
-            </a>
-            <a href="" className="mr-3 text-xl">
-              <FaFacebookF />
-            </a>
-            <a href="" className="mr-3 text-2xl">
-              <AiOutlineGoogle />
-            </a>
-            <a href="" className="mr-3 text-2xl">
-              <BsInstagram />
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
