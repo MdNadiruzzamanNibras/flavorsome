@@ -19,9 +19,9 @@ const HeroAfter = () => {
           />
         </div>
         <div className="flex justify-center ">
-          <div>
+          <div className="px-4 md:px-0">
             {/* <h2>about</h2> */}
-            <h1 className="font-bold  lg:text-5xl md:text-2xl lg:mt-20 ">
+            <h1 className="font-bold text-3xl lg:text-5xl md:text-2xl lg:mt-20 ">
               Flavorsome <br /> Restaurant
             </h1>
             <p className="w-96 lg:font-medium lg:text-xl lg:mt-8">
@@ -29,7 +29,7 @@ const HeroAfter = () => {
               with the necessary regelialia. It is a paradisematic country, in
               which roasted parts of sentences fly into your mouth.
             </p>
-            <p className="w-96 lg:font-medium lg:text-xl lg:my-8">
+            <p className="w-96 lg:font-medium text-lg lg:text-xl lg:my-8">
               Mon - Fri <span className="font-bold">8 AM - 11 PM</span>
             </p>
           </div>
