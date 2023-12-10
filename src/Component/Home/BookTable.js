@@ -53,30 +53,40 @@ const BookTable = () => {
   return (
     <div>
       <div>
-        <Image src={process} alt="background" className="w-full relative" />
+        <Image
+          src={process}
+          alt="background"
+          className="w-full h-[500px] md:h-full relative"
+        />
         <div className="container mx-auto absolute m">
-          <div className="flex absolute mt-[-800px]">
+          <div className="lg:grid lg:grid-cols-2 mx-9 md:mx-0 absolute mt-[-480px] lg:mt-[-800px]">
             <div>
-              <Image src={note} alt="note" />
+              <Image
+                className=" hidden lg:block lg:ml-44"
+                src={note}
+                alt="note"
+              />
             </div>
-            <div className=" px-8 py-4  rounded-lg">
-              <h1 className="text-center text-4xl mt-4 text-white font-bold">
-                Book A Table
+            <div className=" px-8 py-4 lg:ml-64  rounded-lg">
+              <h1 className="text-center text-4xl m lg:mt-4 text-white font-bold">
+                Book Table
               </h1>
-              <form onSubmit={handleBook} className="   lg:h-24   my-7 ">
+              <form onSubmit={handleBook} className="      lg:my-7 ">
                 <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                   <input
                     type="text"
                     name="email"
                     value={user?.email}
                     placeholder="Enter you email"
-                    className="border-b-2 rounded-lg px-5 py-2 focus:outline-none"
+                    className="border-2 border-indigo-900 lg:text-xl font-medium text-white lg:w-[540px] lg:h-20 my-5
+                     bg-indigo-900 text-center rounded-lg lg:px-5 lg:py-2 focus:outline-none"
                   />
                 </div>
                 <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                   <select
                     name="person"
-                    className="border-b-2 w-30 px-5 rounded-lg py-2 focus:outline-none focus:"
+                    className="border-2 border-indigo-900 text-xl font-medium text-white lg:w-[540px] lg:h-20 my-5
+                     bg-indigo-900 text-center rounded-lg px-5 py-2 focus:outline-none"
                   >
                     <option value="1 Person">1 Person</option>
                     <option value="2 Persons">2 Persons</option>
@@ -93,7 +103,8 @@ const BookTable = () => {
                     name="date"
                     value={selectedDate}
                     min={selectedDate}
-                    className="border-b-2 rounded-lg w-30 px-5 py-2 focus:outline-none focus:"
+                    className="border-2 border-indigo-900 text-xl font-medium text-white lg:w-[540px] h-20 my-5
+                     bg-indigo-900 text-center rounded-lg px-5 py-2 focus:outline-none"
                     onChange={(e) => setSelectedDate(e.target.value)}
                   />
                 </div>
@@ -101,7 +112,8 @@ const BookTable = () => {
                 <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                   <select
                     name="schedule"
-                    className="border-b-2 px-5 py-2 rounded-lg  w-30 focus:outline-none"
+                    className="border-2 border-indigo-900 lg:text-xl lg:font-medium text-white lg:w-[540px] lg:h-20 lg:my-5
+                     bg-indigo-900 text-center rounded-lg px-5 py-2 focus:outline-none"
                   >
                     <option value="12:00 AM">12:00 AM</option>
                     <option value="12:30 AM">12:30 AM</option>
@@ -125,9 +137,8 @@ const BookTable = () => {
                 </div>
                 <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                   <button
-                    className="py-2 px-6  rounded btn text-lg 
-                    font-semibold "
-                    style={{ backgroundColor: "#c8a97e", color: "whitesmoke" }}
+                    className="border-2 border-indigo-900 lg:text-xl lg:font-medium text-white lg:w-[540px] lg:h-20 lg:my-5
+                     bg-indigo-900 text-center rounded-lg px-5 py-2 focus:outline-none"
                     type="submit"
                   >
                     Book A Table
