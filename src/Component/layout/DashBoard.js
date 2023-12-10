@@ -70,7 +70,7 @@ const DashBoard = ({ children }) => {
                 </>
               )}
 
-              {
+              {admin && (
                 <>
                   <h1 className="my-3 flex items-center">
                     <span className="text-3xl">
@@ -100,7 +100,7 @@ const DashBoard = ({ children }) => {
                     </span>
                   </h1>
                 </>
-              }
+              )}
             </div>
           </div>
           <div className="flex-none">
