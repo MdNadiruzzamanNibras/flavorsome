@@ -13,6 +13,7 @@ const Registration = () => {
   const [updateProfile, updating, UpError] = useUpdateProfile(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const [cookies, setCookie] = useCookies(["userEmail"]);
   const router = useRouter();
   const location = router?.query?.from || "/";
   const handleSubmit = async (e) => {
@@ -20,7 +21,7 @@ const Registration = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-
+    setCookie("userEmail", email);
     const user = { name: name, email: email };
     fetch("https://encouraging-pants-dog.cyclic.app/user", {
       method: "POST",
