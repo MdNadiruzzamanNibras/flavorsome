@@ -1,6 +1,7 @@
 import RootLayout from "@/Component/layout/RootLayout";
 import auth from "@/firebase/firebase.config";
 import Link from "next/link";
+import { useCookies } from "react-cookie";
 import { useRouter } from "next/navigation";
 import {
   useCreateUserWithEmailAndPassword,
