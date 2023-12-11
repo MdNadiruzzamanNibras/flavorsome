@@ -47,8 +47,9 @@ const Home = ({ menuData, reviews }) => {
         <FoodPHILOSOPHY></FoodPHILOSOPHY>
         <CateringServices></CateringServices>
         <Menu menuData={menuData}></Menu>
-        <Master_Chef></Master_Chef>
+
         <BookTable></BookTable>
+        <Master_Chef></Master_Chef>
         <HappyClient reviews={reviews}></HappyClient>
         <RecentPost></RecentPost>
         {/* </div> */}

@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       colors: {
         deepIndigo: "#0D1634",
+        midnightBlue: "#000929",
+        pastelPurple: "#E8E6F9",
       },
     },
   },
