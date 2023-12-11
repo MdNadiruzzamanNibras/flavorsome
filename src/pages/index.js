@@ -24,7 +24,7 @@ const Home = ({ menuData, reviews }) => {
             alt="Picture of the author"
           />
         </div>
-        <div className="absolute   text-white mt-[-400px]  lg:ml-52 mx-10 md:mt-[-500px]  lg:mt-[-400px]">
+        <div className="absolute   text-white mt-[-400px]  lg:ml-52 mx-10 md:mt-[-500px]  lg:mt-[-500px]">
           {/* <h1 className="absolute  text-4xl   md:mt-[-500px]  lg:ml-40 lg:mt-[-400px]"> */}
           <h1 className="text-4xl font-extrabold md:text-6xl">
             <span>Crafting your</span> <br /> <span>Exceptional Dining</span>{" "}

@@ -1,6 +1,7 @@
 import auth from "@/firebase/firebase.config";
 import { signOut } from "firebase/auth";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -19,6 +20,12 @@ const RootLayout = ({ children }) => {
   const toggleMenu = () => {
     setOpen(!open);
   };
+  const router = useRouter();
+  const isPathActive = (path) => {
+    return router.pathname === path
+      ? "bg-black px-3 py-1 text-white rounded-lg"
+      : "";
+  };
   return (
     <div>
       <div className="shadow-md w-full top-0 left-0">
@@ -28,7 +35,7 @@ const RootLayout = ({ children }) => {
           }`}
         >
           <div>
-            <h1 className="text-3xl font-bold pl-7 md:ml-10">Flavorsome</h1>
+            <h1 className="text-3xl font-bold  pl-7 md:ml-10">Flavorsome</h1>
           </div>
           <div
             onClick={toggleMenu}
@@ -42,20 +49,18 @@ const RootLayout = ({ children }) => {
              bg-white lg:mr-40 md:mr-14  w-full md:w-auto md:pl-0 pl-9 transition-all
               duration-500 ease-in left-0 ${open ? "block" : "hidden"}`}
             >
-              <li>
-                <Link className="ml-4" href="/">
-                  Home
-                </Link>
+              <li className={`ml-4 ${isPathActive("/")}`}>
+                <Link href="/">Home</Link>
               </li>
               {user && (
-                <li className="ml-4">
+                <li className={`ml-4 ${isPathActive("/dashboard")}`}>
                   <Link href="/dashboard">DashBoard</Link>
                 </li>
               )}
-              <li className="ml-4">
+              <li className={`ml-4 ${isPathActive("/contact")}`}>
                 <Link href="/contact">Contact</Link>
               </li>
-              <li className="ml-4">
+              <li className={`ml-4 ${isPathActive("/menu")}`}>
                 <Link href="/menu">Menu</Link>
               </li>
               {user ? (
@@ -63,9 +68,13 @@ const RootLayout = ({ children }) => {
                   Log Out
                 </li>
               ) : (
-                <li className="ml-4 hover:cursor-pointer">
-                  <Link href="/login">Login</Link>
-                </li>
+                <>
+                  <li
+                    className={`ml-4 cursor-pointer ${isPathActive("/login")}`}
+                  >
+                    <Link href="/login">Login</Link>
+                  </li>
+                </>
               )}
             </ul>
             {/* {

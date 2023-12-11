@@ -27,7 +27,7 @@ const DashBoard = ({ children }) => {
   };
   return (
     <div className="flex">
-      <div className="w-64 min-h-screen bg-black text-white">
+      <div className="w-64 min-h-screen bg-book text-white">
         <div className="flex  flex-col h-full">
           <div className="flex-grow">
             <div className=" flex flex-col text-2xl text-start ml-10 mt-5">

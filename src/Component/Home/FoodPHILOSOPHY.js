@@ -22,13 +22,10 @@ const FoodPHILOSOPHY = () => {
           <div>
             <div className="md:ml-16 ml-10 lg:ml-0 md:mt-7 lg:mt-0">
               <div className="flex items-center ">
-                <h6 style={{ color: "#c8a97e" }} className="text-xl font-bold">
+                <h6 className="text-xl text-book font-bold">
                   QUALITY & BALANCE
                 </h6>
-                <hr
-                  style={{ backgroundColor: "#c8a97e" }}
-                  className="w-20 h-1 ml-8"
-                />
+                <hr className="w-20 h-1 ml-8 bg-book" />
               </div>
               <h2 className="md:text-4xl text-2xl my-6 font-bold">
                 OUR FOOD PHILOSOPHY
@@ -38,10 +35,7 @@ const FoodPHILOSOPHY = () => {
                 and specialties from Italy and beyond to create his own culinary
                 world, full of surprising artistry.
               </p>
-              <button
-                style={{ backgroundColor: "#c8a97e" }}
-                className="uppercase py-3 px-6 text-white font-semibold"
-              >
+              <button className="uppercase py-3 px-6 text-white bg-book font-semibold">
                 Learn more
               </button>
             </div>

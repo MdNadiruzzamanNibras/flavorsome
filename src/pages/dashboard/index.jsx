@@ -3,16 +3,22 @@ import DashBoard from "@/Component/layout/DashBoard";
 import useAdmin from "@/Hook/useAdmin";
 import auth from "@/firebase/firebase.config";
 import { useRouter } from "next/navigation";
+import { useCookies } from "react-cookie";
 import { useAuthState } from "react-firebase-hooks/auth";
 // import Avatar from "react-avatar";
 
 const ProfilePage = ({ personaldata }) => {
   const [user, loading] = useAuthState(auth);
+  const [cookies, setCookie] = useCookies(["userEmail"]);
   const router = useRouter();
   if (!user && loading) {
     return <p>loading...</p>;
   }
-
+  const email = user?.email;
+  if (user && cookies.userEmail !== user?.email) {
+    setCookie("userEmail", email);
+  }
+  console.log(cookies.userEmail, "cookies");
   const firstWord = personaldata?.name?.trim()?.charAt(0);
 
   const handleUpdate = () => {
@@ -42,7 +48,7 @@ const ProfilePage = ({ personaldata }) => {
               <div>
                 <div
                   className="w-24 h-24 rounded-full text-white
-             bg-black border-4 border-gray-50 mt-6 flex justify-center items-center"
+             bg-book border-4 border-gray-50 mt-6 flex justify-center items-center"
                 >
                   <h1
                     style={styles}
@@ -54,8 +60,9 @@ const ProfilePage = ({ personaldata }) => {
                 <div>
                   <button
                     onClick={handleUpdate}
-                    className="px-8 rounded-md text-lg font-medium cursor-pointer py-2 border-2 border-black
-             text-white mt-2 bg-black hover:text-black hover:bg-white"
+                    className="px-8 rounded-md text-lg font-medium 
+                    cursor-pointer py-2 border-2 border-book
+             text-white mt-2 bg-book hover:text-book hover:bg-white"
                   >
                     Edit
                   </button>

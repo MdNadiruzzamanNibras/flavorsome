@@ -5,7 +5,7 @@ const Menu = ({ menuData }) => {
   return (
     <div className="container mx-auto">
       <div className="my-20  ">
-        <h1 className="text-4xl font-extrabold  md:ml-0 lg:mr-44 text-center my-7">
+        <h1 className="text-4xl font-extrabold text-book md:ml-0 lg:mr-44 text-center my-7">
           Our Menu
         </h1>
 
@@ -31,7 +31,7 @@ const Menu = ({ menuData }) => {
                       <h5>{food.title}</h5>
                     </div>
                     <div className="ml-28">
-                      <h5 style={{ color: "#c8a97e" }}> $29 </h5>
+                      <h5 className="text-book"> $29 </h5>
                     </div>
                   </div>
                   <h4 className="text-lg mt-12 lg:mx-3">
@@ -39,10 +39,7 @@ const Menu = ({ menuData }) => {
                   </h4>
                   <div className="lg:ml-0 md:ml-16">
                     <Link href={`food/${food?._id}`}>
-                      <button
-                        style={{ backgroundColor: "#c8a97e", color: "white" }}
-                        className=" py-2 px-5 mt-3 ml-3 font-bold"
-                      >
+                      <button className="bg-book text-white py-2 px-5 mt-3 ml-3 font-bold">
                         Order Now
                       </button>
                     </Link>
