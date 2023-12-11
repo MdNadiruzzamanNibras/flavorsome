@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        book: "#0D1634",
+        deepIndigo: "#0D1634",
       },
     },
   },

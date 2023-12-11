@@ -79,14 +79,14 @@ const BookTable = () => {
                       name="email"
                       value={user?.email}
                       placeholder="Enter you email"
-                      className="border-2 border-book  lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5
-                     bg-book text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
+                      className="border-2 border-deepIndigo  lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5
+                     bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
                     />
                   </div>
                   <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                     <select
                       name="person"
-                      className="border-2 border-book lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5 md:text-xl bg-book text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
+                      className="border-2 border-deepIndigo lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5 md:text-xl bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
                     >
                       <option value="1 Person">1 Person</option>
                       <option value="2 Persons">2 Persons</option>
@@ -103,8 +103,8 @@ const BookTable = () => {
                       name="date"
                       value={selectedDate}
                       min={selectedDate}
-                      className="border-2 md:text-xl border-book lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5
-                     bg-book text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
+                      className="border-2 md:text-xl border-deepIndigo lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5
+                     bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
                       onChange={(e) => setSelectedDate(e.target.value)}
                     />
                   </div>
@@ -112,8 +112,8 @@ const BookTable = () => {
                   <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                     <select
                       name="schedule"
-                      className="border-2 md:text-xl border-book lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5
-                     bg-book text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
+                      className="border-2 md:text-xl border-deepIndigo lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5
+                     bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
                     >
                       <option value="12:00 AM">12:00 AM</option>
                       <option value="12:30 AM">12:30 AM</option>
@@ -138,7 +138,7 @@ const BookTable = () => {
                 </div>
                 <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                   <button
-                    className="border-2 md:text-xl border-book lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5 hover:bg-indigo-900  bg-book text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
+                    className="border-2 md:text-xl border-deepIndigo lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5 hover:bg-indigo-900  bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
                     type="submit"
                   >
                     Book A Table

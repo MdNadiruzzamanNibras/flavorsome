@@ -48,7 +48,7 @@ const ProfilePage = ({ personaldata }) => {
               <div>
                 <div
                   className="w-24 h-24 rounded-full text-white
-             bg-book border-4 border-gray-50 mt-6 flex justify-center items-center"
+             bg-deepIndigo border-4 border-gray-50 mt-6 flex justify-center items-center"
                 >
                   <h1
                     style={styles}
@@ -61,8 +61,8 @@ const ProfilePage = ({ personaldata }) => {
                   <button
                     onClick={handleUpdate}
                     className="px-8 rounded-md text-lg font-medium 
-                    cursor-pointer py-2 border-2 border-book
-             text-white mt-2 bg-book hover:text-book hover:bg-white"
+                    cursor-pointer py-2 border-2 border-deepIndigo
+             text-white mt-2 bg-deepIndigo hover:text-deepIndigo hover:bg-white"
                   >
                     Edit
                   </button>

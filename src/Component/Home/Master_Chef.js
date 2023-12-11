@@ -39,7 +39,7 @@ const Master_Chef = () => {
             />
             <h4 className="text-xl font-bold ml-3 my-2">{chef.name}</h4>
             <p className="ml-3">{chef.position}</p>
-            <div className="flex items-center text-book  ml-2 mt-3">
+            <div className="flex items-center text-deepIndigo  ml-2 mt-3">
               <a href="" className="mr-3 text-3xl">
                 <LiaTwitter />
               </a>
