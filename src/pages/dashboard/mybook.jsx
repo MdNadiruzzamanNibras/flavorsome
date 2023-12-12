@@ -45,7 +45,7 @@ export const getServerSideProps = async ({ req }) => {
       .find((cookie) => cookie.trim().startsWith("userEmail="))
       ?.split("=")[1];
     const decodedEmail = decodeURIComponent(userEmail);
-    console.log(decodedEmail, "decodedEmail");
+
     if (!decodedEmail) {
       throw new Error("User email not found");
     }

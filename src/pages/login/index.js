@@ -21,7 +21,6 @@ const Login = () => {
   if (user) {
     router.replace(location);
   }
-  console.log(cookies, "cokd 23");
 
   return (
     <div className="flex justify-center items-center h-screen">

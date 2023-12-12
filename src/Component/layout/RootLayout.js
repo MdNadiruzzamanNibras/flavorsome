@@ -94,7 +94,7 @@ const RootLayout = ({ children }) => {
       <div>{children}</div>
       <footer className="footer px-10 py-24 bg-deepIndigo text-pastelPurple">
         <div className="container mx-auto">
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-1 lg:grid-cols-4">
             <nav className="flex flex-col w-full">
               <header className="text-4xl font-extrabold mb-10">
                 Flavorsome
@@ -188,13 +188,13 @@ const RootLayout = ({ children }) => {
                 Subscribe our Newsletter
               </header>
               <div className="grid grid-flow-col gap-4">
-                <div className="flex items-center">
+                <div className="md:flex md:items-center">
                   <input
                     type="text"
                     placeholder="Your Email"
-                    className="text-center px-8  py-3 text-lg font-semibold rounded-lg"
-                  />
-                  <button className="px-5 py-3 text-lg ml-5 rounded bg-indigo-950">
+                    className="text-center md:px-8  py-3 text-lg font-semibold rounded-lg"
+                  />{" "}
+                  <button className="md:px-5 py-3 text-lg ml-5 rounded bg-indigo-950">
                     Subscribe
                   </button>
                 </div>

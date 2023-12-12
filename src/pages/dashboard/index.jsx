@@ -18,7 +18,7 @@ const ProfilePage = ({ personaldata }) => {
   if (user && cookies.userEmail !== user?.email) {
     setCookie("userEmail", email);
   }
-  console.log(cookies.userEmail, "cookies");
+
   const firstWord = personaldata?.name?.trim()?.charAt(0);
 
   const handleUpdate = () => {
@@ -114,7 +114,7 @@ export const getServerSideProps = async ({ req }) => {
       .split(";")
       .find((cookie) => cookie.trim().startsWith("userEmail="))
       ?.split("=")[1];
-    console.log(userEmail, "k97");
+
     if (!userEmail) {
       throw new Error("User email not found");
     }
@@ -124,7 +124,7 @@ export const getServerSideProps = async ({ req }) => {
     );
 
     const personaldata = await res.json();
-    console.log(personaldata, "kdkd");
+
     return {
       props: {
         personaldata,

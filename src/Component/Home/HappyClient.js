@@ -6,7 +6,7 @@ import man_tw from "../../../public/images/avatar/image_2.jpg";
 import Image from "next/image";
 const HappyClient = ({ reviews }) => {
   const reversereviews = [...reviews].reverse();
-  console.log(reviews);
+
   return (
     <div className=" bg-midnightBlue">
       <div className="container mx-auto mt-20  pb-12">

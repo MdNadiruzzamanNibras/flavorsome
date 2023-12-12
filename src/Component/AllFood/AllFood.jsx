@@ -1,7 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ReactPaginate from "react-paginate";
 
 const AllFood = ({ menuData }) => {
+  const [page, setpage] = useState(0);
+  const ITEMS_PER_PAGE = 6;
+  const handlePageClick = (selectedPage) => {
+    setpage(selectedPage.selected * ITEMS_PER_PAGE);
+  };
+
+  const paginatedData = menuData.slice(page, page + ITEMS_PER_PAGE);
+
   return (
     <div className="container mx-auto my-20 px-2">
       <div>
@@ -9,7 +19,7 @@ const AllFood = ({ menuData }) => {
           <h1 className="text-3xl font-bold   text-black"> Our Menu</h1>
         </div>
         <div className="grid md:ml-44 grid-cols-1 md:grid-cols-2 gap-5 ">
-          {menuData.map((food) => (
+          {paginatedData.map((food) => (
             <div
               key={food._id}
               className="  flex items-center rounded-lg w-64 border-2 lg:w-[520px]   my-5"
@@ -44,6 +54,27 @@ const AllFood = ({ menuData }) => {
             </div>
           ))}
         </div>
+      </div>
+      <div>
+        <ReactPaginate
+          className="flex justify-center mt-16 items-center text-white "
+          previousLabel={"Previous"}
+          nextLabel={"Next"}
+          breakLabel={"..."}
+          pageCount={Math.ceil(menuData.length / ITEMS_PER_PAGE)}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName="flex justify-center items-center"
+          pageClassName="mr-2"
+          pageLinkClassName="bg-deepIndigo  py-2 px-3 rounded-md"
+          activeClassName=" text-white  bg-deepIndigo  py-2 px-3 rounded-md"
+          previousClassName="mr-2"
+          previousLinkClassName="bg-deepIndigo  py-2 px-3 rounded-md"
+          nextClassName="mr-2"
+          nextLinkClassName="bg-deepIndigo  py-2 px-3 rounded-md"
+          breakClassName="mr-2"
+          breakLinkClassName="bg-deepIndigo  py-2 px-3 rounded-md"
+        />
       </div>
     </div>
   );

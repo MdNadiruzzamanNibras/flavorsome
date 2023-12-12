@@ -2,7 +2,6 @@ import DashBoard from "@/Component/layout/DashBoard";
 import Image from "next/image";
 
 const Order = ({ orders }) => {
-  console.log(orders);
   return (
     <div className="container mx-auto">
       <div className="overflow-x-auto">
