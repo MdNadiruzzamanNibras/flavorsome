@@ -32,40 +32,39 @@ const DashBoard = ({ children }) => {
           <div className="flex-grow">
             <div className=" flex flex-col text-2xl text-start ml-10 mt-5">
               <h1 className="mb-3 flex items-center">
-                <span className="text-3xl">
-                  <MdOutlinePermIdentity />
-                </span>
-                <span className="ml-3">
-                  <Link href="/dashboard">Profile</Link>
-                </span>
+                <Link href="/dashboard">
+                  <span className="text-3xl">
+                    <MdOutlinePermIdentity />
+                  </span>
+                  <span className="ml-3">Profile</span>
+                </Link>
               </h1>
 
               {user && !admin && (
                 <>
                   <h1 className="my-3 flex items-center">
-                    <span className="text-3xl">
-                      <VscFeedback />
-                    </span>
-                    <span className="ml-3">
-                      {" "}
-                      <Link href="/dashboard/review">Review</Link>
-                    </span>
+                    <Link href="/dashboard/review">
+                      <span className="text-3xl">
+                        <VscFeedback />
+                      </span>
+                      <span className="ml-3"> Review</span>
+                    </Link>
                   </h1>
                   <h1 className="my-3 flex items-center">
-                    <span className="text-3xl">
-                      <BsFillJournalBookmarkFill />
-                    </span>
-                    <span className="ml-3">
-                      <Link href="/dashboard/mybook">Book Table</Link>
-                    </span>
+                    <Link href="/dashboard/mybook">
+                      <span className="text-3xl">
+                        <BsFillJournalBookmarkFill />
+                      </span>
+                      <span className="ml-3">Book Table</span>
+                    </Link>
                   </h1>
                   <h1 className="my-3 flex items-center">
-                    <span className="text-3xl">
-                      <MdNoFood />
-                    </span>
-                    <span className="ml-3">
-                      <Link href="/order/myorder">My Order</Link>
-                    </span>
+                    <Link href="/order/myorder">
+                      <span className="text-3xl">
+                        <MdNoFood />
+                      </span>
+                      <span className="ml-3">My Order</span>
+                    </Link>
                   </h1>
                 </>
               )}
@@ -73,31 +72,29 @@ const DashBoard = ({ children }) => {
               {admin && (
                 <>
                   <h1 className="my-3 flex items-center">
-                    <span className="text-3xl">
-                      {" "}
-                      <BiSolidFoodMenu />
-                    </span>
-                    <span className="ml-3">
-                      {" "}
-                      <Link href="/dashboard/addfood">Add Food</Link>
-                    </span>
+                    <Link href="/dashboard/addfood">
+                      <span className="text-3xl">
+                        {" "}
+                        <BiSolidFoodMenu />
+                      </span>
+                      <span className="ml-3"> Add Food</span>
+                    </Link>
                   </h1>
                   <h1 className="my-3 flex items-center">
-                    <span className="text-3xl">
-                      <PiNotebookDuotone />
-                    </span>
-                    <span className="ml-3">
-                      {" "}
-                      <Link href="/dashboard/book">Book Table</Link>
-                    </span>
+                    <Link href="/dashboard/book">
+                      <span className="text-3xl">
+                        <PiNotebookDuotone />
+                      </span>
+                      <span className="ml-3"> Book Table</span>
+                    </Link>
                   </h1>
                   <h1 className="my-3 flex items-center">
-                    <span className="text-3xl">
-                      <LuClipboardList />
-                    </span>
-                    <span className="ml-3">
-                      <Link href="/order">All Order</Link>
-                    </span>
+                    <Link href="/order">
+                      <span className="text-3xl">
+                        <LuClipboardList />
+                      </span>
+                      <span className="ml-3">All Order</span>
+                    </Link>
                   </h1>
                 </>
               )}
@@ -106,12 +103,12 @@ const DashBoard = ({ children }) => {
           <div className="flex-none">
             <div className=" flex mt-auto flex-col text-2xl text-start ml-10 ">
               <h1 className="my-3 flex items-center">
-                <span className="text-3xl">
-                  <FaHome />
-                </span>
-                <span className="ml-3">
-                  <Link href="/">Home</Link>
-                </span>
+                <Link href="/">
+                  <span className="text-3xl">
+                    <FaHome />
+                  </span>
+                  <span className="ml-3">Home</span>
+                </Link>
               </h1>
               <h1
                 onClick={logout}
