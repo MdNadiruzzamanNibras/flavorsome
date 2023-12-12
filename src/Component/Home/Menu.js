@@ -30,7 +30,7 @@ const Menu = ({ menuData }) => {
                     <div className="flex ml-2 justify-between">
                       <h5>{food.title}</h5>
 
-                      <h5 className="text-deepIndigo ml-48 lg:ml-32"> $29 </h5>
+                      <h5 className="text-red-500 ml-48 lg:ml-32"> $29 </h5>
                     </div>
                   </div>
                   <h4 className="text-lg mt-12 lg:mx-3">

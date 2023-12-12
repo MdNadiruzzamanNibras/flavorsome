@@ -14,6 +14,7 @@ module.exports = {
         deepIndigo: "#0D1634",
         midnightBlue: "#000929",
         pastelPurple: "#E8E6F9",
+        deepBlue: "#19213E",
       },
     },
   },

@@ -29,7 +29,7 @@ const AllFood = ({ menuData }) => {
                     <h5>{food.title}</h5>
                   </div>
                   <div>
-                    <h5 className="text-deepIndigo"> $29 </h5>
+                    <h5 className="text-red-500"> $29 </h5>
                   </div>
                 </div>
                 <h4 className="text-lg mt-12 mx-3">
