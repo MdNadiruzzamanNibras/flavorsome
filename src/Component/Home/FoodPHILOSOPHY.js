@@ -1,6 +1,6 @@
 import Image from "next/image";
-import first from "../../../public/images/philosphy/uper.jpg";
-import two from "../../../public/images/philosphy/down.jpg";
+import two from "../../../public/images/philosphy/uper.jpg";
+import first from "../../../public/images/philosphy/down.jpg";
 
 const FoodPHILOSOPHY = () => {
   return (

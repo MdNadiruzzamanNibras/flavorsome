@@ -22,34 +22,42 @@ const AllFood = ({ menuData }) => {
           {paginatedData.map((food) => (
             <div
               key={food._id}
-              className="  flex items-center rounded-lg w-64 border-2 lg:w-[520px]   my-5"
+              className="  lg:flex lg:items-center rounded-lg hidden md:block w-80 mx-10 md:mx-0  border-2 lg:w-[520px]   my-5"
             >
-              <div className="w-32 lg:w-64 lg:h-64">
+              <div className="">
                 <Image
-                  width={256}
-                  height={256}
+                  width={1000}
+                  height={1000}
                   src={food.image_url}
-                  className=" lg:w-64 lg:h-64"
+                  className="w-80  lg:w-64 lg:h-64"
                   alt="menu"
                 />
               </div>
-              <div className="w-32 lg:w-64 lg:h-64">
-                <div className="flex  justify-between text-xl font-bold mt-3">
-                  <div className="ml-2 ">
-                    <h5>{food.title}</h5>
+              <div className="w-32 lg:w-64 flex flex-col md:h-64">
+                <div className="flex-grow ml-4 text-xl">
+                  <div className="flex font-bold justify-between">
+                    <div className=" ">
+                      <h5>{food.title}</h5>
+                    </div>
+                    <div>
+                      <h5 className="text-red-500 mr-1"> $29 </h5>
+                    </div>
                   </div>
-                  <div>
-                    <h5 className="text-red-500"> $29 </h5>
+
+                  <h4 className="text-lg mt-2 ">
+                    Meat, Potatoes, Rice, Tomatoe
+                  </h4>
+                </div>
+
+                <div className="flex-none">
+                  <div className="lg:ml-0 flex justify-center mb-2 mt-auto md:ml-16">
+                    <Link href={`food/${food?._id}`}>
+                      <button className="bg-deepIndigo rounded-md text-white py-2 px-5 mt-3 ml-3 font-bold">
+                        Order Now
+                      </button>
+                    </Link>
                   </div>
                 </div>
-                <h4 className="text-lg mt-12 mx-3">
-                  Meat, Potatoes, Rice, Tomatoe
-                </h4>
-                <Link href={`food/${food?._id}`}>
-                  <button className=" py-2 px-5 mt-3 ml-3 bg-deepIndigo text-white rounded-md font-bold">
-                    Order Now
-                  </button>
-                </Link>
               </div>
             </div>
           ))}

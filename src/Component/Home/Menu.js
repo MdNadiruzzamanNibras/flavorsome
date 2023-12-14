@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Menu = ({ menuData }) => {
+  const reverseMenu = menuData.reverse();
   return (
     <div className="container mx-auto">
       <div className="my-20  ">
@@ -10,7 +11,7 @@ const Menu = ({ menuData }) => {
         </h1>
 
         <div className="grid grid-cols-1 ml-20 md:24 lg:ml-20 md:grid-cols-2  gap-5 ">
-          {menuData.slice(0, 4).map((food) => (
+          {reverseMenu?.slice(0, 4).map((food) => (
             <>
               <div
                 key={food._id}
@@ -25,23 +26,30 @@ const Menu = ({ menuData }) => {
                     alt="menu"
                   />
                 </div>
-                <div className="w-32 lg:w-64 lg:h-64">
-                  <div className="flex w-32 lg:w-64 justify-between text-xl font-bold mt-3">
-                    <div className="flex ml-2 justify-between">
-                      <h5>{food.title}</h5>
-
-                      <h5 className="text-red-500 ml-48 lg:ml-32"> $29 </h5>
+                <div className="w-32 lg:w-64 flex flex-col md:h-64">
+                  <div className="flex-grow ml-4 text-xl">
+                    <div className="flex font-bold justify-between">
+                      <div className=" ">
+                        <h5>{food.title}</h5>
+                      </div>
+                      <div>
+                        <h5 className="text-red-500 mr-1"> $29 </h5>
+                      </div>
                     </div>
+
+                    <h4 className="text-lg mt-2 ">
+                      Meat, Potatoes, Rice, Tomatoe
+                    </h4>
                   </div>
-                  <h4 className="text-lg mt-12 lg:mx-3">
-                    Meat, Potatoes, Rice, Tomatoe
-                  </h4>
-                  <div className="lg:ml-0 md:ml-16">
-                    <Link href={`food/${food?._id}`}>
-                      <button className="bg-deepIndigo text-white py-2 px-5 mt-3 ml-3 font-bold">
-                        Order Now
-                      </button>
-                    </Link>
+
+                  <div className="flex-none">
+                    <div className="lg:ml-0 flex justify-center mb-2 mt-auto md:ml-16">
+                      <Link href={`food/${food?._id}`}>
+                        <button className="bg-deepIndigo rounded-md text-white py-2 px-5 mt-3 ml-3 font-bold">
+                          Order Now
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -54,17 +62,15 @@ const Menu = ({ menuData }) => {
                   height={500}
                   className="w-[400px] h-[300px] "
                 />
-                <div className="flex justify-between">
+                <div className="flex text-xl font-bold justify-between">
                   <div className="ml-2 ">
                     <h5>{food.title}</h5>
                   </div>
                   <div>
-                    <h5 className="text-deepIndigo"> $29 </h5>
+                    <h5 className="text-red-500"> $29 </h5>
                   </div>
                 </div>
-                <h4 className="text-lg  lg:mx-3">
-                  Meat, Potatoes, Rice, Tomatoe
-                </h4>
+                <h4 className="text-lg  mx-3">Meat, Potatoes, Rice, Tomatoe</h4>
                 <div className="flex justify-center">
                   <Link href={`food/${food?._id}`}>
                     <button className="bg-deepIndigo text-white py-2 px-5 mt-3 ml-3 font-bold">
