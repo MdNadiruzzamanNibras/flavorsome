@@ -130,7 +130,7 @@ const RootLayout = ({ children }) => {
                 </a>
               </div>
             </nav>
-            <nav className="flex flex-col lg:ml-20">
+            <nav className="flex flex-col mt-10 lg:mt-0 lg:ml-20">
               <header className="text-2xl font-bold mb-10">Quick Link</header>
               <a
                 href="https://www.youtube.com/"
@@ -163,7 +163,7 @@ const RootLayout = ({ children }) => {
                 Pickup
               </a>
             </nav>
-            <nav className="flex flex-col lg:ml-30">
+            <nav className="flex flex-col mt-10 lg:mt-0 lg:ml-30">
               <header className="text-2xl font-bold mb-10">
                 Terms & Privacy
               </header>
@@ -183,7 +183,7 @@ const RootLayout = ({ children }) => {
                 Privacy Policy
               </a>
             </nav>
-            <nav>
+            <nav className="mt-10 lg:mt-0">
               <header className="text-2xl font-bold mb-10">
                 Subscribe our Newsletter
               </header>
