@@ -78,6 +78,13 @@ const RootLayout = ({ children }) => {
                   >
                     <Link href="/login">Login</Link>
                   </li>
+                  <li
+                    className={`ml-4 cursor-pointer ${isPathActive(
+                      "login/registration"
+                    )}`}
+                  >
+                    <Link href="/login/registration">SignUp</Link>
+                  </li>
                 </>
               )}
             </ul>

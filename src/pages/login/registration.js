@@ -49,7 +49,7 @@ const Registration = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="lg:w-[400px] bg-base-200 shadow-lg py-6 pl-6">
-        <h2 className="text-center text-2xl mb-11 font-bold">Registration</h2>
+        <h2 className="text-center text-2xl mb-11 font-bold">Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col">
             <label className="label">
