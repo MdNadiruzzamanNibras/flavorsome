@@ -73,7 +73,7 @@ const Menu = ({ menuData }) => {
                 <h4 className="text-lg  mx-3">Meat, Potatoes, Rice, Tomatoe</h4>
                 <div className="flex justify-center">
                   <Link href={`food/${food?._id}`}>
-                    <button className="bg-deepIndigo text-white py-2 px-5 mt-3 ml-3 font-bold">
+                    <button className="bg-deepIndigo rounded-lg text-white py-2 px-5 mt-3 ml-3 font-bold">
                       Order Now
                     </button>
                   </Link>
