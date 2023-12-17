@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import Loading from "@/Component/Loading/Loading";
 import RootLayout from "@/Component/layout/RootLayout";
 import auth from "@/firebase/firebase.config";
 
@@ -10,7 +11,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 const foodDetail = ({ food }) => {
   const [user] = useAuthState(auth);
-
+  if (!food) {
+    return <Loading />;
+  }
   const handleOrder = (e) => {
     e.preventDefault();
 
