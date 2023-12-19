@@ -46,8 +46,9 @@ const Home = ({ menuData, reviews }) => {
         <CountAll></CountAll>
         <OurStory></OurStory>
         <FoodPHILOSOPHY></FoodPHILOSOPHY>
-        <CateringServices></CateringServices>
         <Menu menuData={menuData}></Menu>
+
+        <CateringServices></CateringServices>
 
         <BookTable></BookTable>
         <Master_Chef></Master_Chef>

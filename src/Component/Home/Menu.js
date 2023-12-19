@@ -5,8 +5,8 @@ const Menu = ({ menuData }) => {
   const reverseMenu = menuData.reverse();
   return (
     <div className="container mx-auto">
-      <div className="my-20  ">
-        <h1 className="text-4xl font-extrabold text-deepIndigo md:ml-0 lg:mr-44 text-center my-7">
+      <div className="my-20  lg:ml-8">
+        <h1 className="text-4xl font-extrabold text-deepIndigo md:ml-0 lg:mr-28 text-center my-7">
           Our Menu
         </h1>
 
