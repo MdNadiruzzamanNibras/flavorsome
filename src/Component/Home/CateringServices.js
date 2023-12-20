@@ -24,7 +24,7 @@ const CateringServices = () => {
         </div>
         <div className="text-center">
           <Image
-            className="w-32 ml-28 md:ml-[330px] lg:ml-16 mb-2"
+            className="w-32 ml-32 md:ml-[330px] lg:ml-16 mb-2"
             src={meeting}
             alt="Business Meetings"
           />

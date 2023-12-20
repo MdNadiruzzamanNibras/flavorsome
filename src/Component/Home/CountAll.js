@@ -1,50 +1,67 @@
 import Image from "next/image";
 import { CountUp } from "use-count-up";
 import count from "../../../public/images/couter/Process-bg.png";
-
+import "../../styles/styles.css";
 const CountAll = () => {
+  const counterName = [{}];
   return (
     <div className="container mx-auto mb-12">
-      <div className="relative">
-        <Image src={count} alt="" className="w-full h-[500px] lg:h-72" />
+      <div className="relative ">
+        {/* <Image
+          alt="Mountains"
+          src={count}
+          placeholder="blur"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
+        /> */}
+        <Image
+          src={count}
+          alt=""
+          className="w-full  relative h-[500px] lg:h-72"
+        />
       </div>
+
+      <h1 className="text-8xl  absolute w-full  bg-white text-center">
+        Hello world
+      </h1>
+      {/* className="absolute z-10 mt-[-500px] lg:mt-[-200px]" */}
+
       <div
-        className="grid absolute text-center
-        mt-[-500px] lg:mt-[-200px] text-white grid-cols-1 ml-16 lg:ml-0 lg:grid-cols-4 mb-4"
+        className="grid background-image  text-center
+         text-white grid-cols-12   mb-4 bg-red-500"
       >
-        <div>
-          <div className="md:mx-56 mt-5 lg:mr-32 lg:ml-10">
-            <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
-              <CountUp isCounting start={0} end={18} duration={13} />
-            </h1>
-            <p className="lg:font-medium lg:text-base uppercase">
-              Years of experienced
-            </p>
-          </div>
+        <div className=" mt-5 col-span-12 md:col-span-6 lg:col-span-3 ">
+          <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
+            <CountUp isCounting start={0} end={18} duration={13} />
+          </h1>
+          <p className="lg:font-medium lg:text-base uppercase">
+            Years of experienced
+          </p>
         </div>
-        <div>
-          <div className="mt-5">
-            <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
-              <CountUp isCounting start={0} end={100} duration={13} />
-            </h1>
-            <p className="lg:font-medium lg:text-base">MENUS/DISH</p>
-          </div>
+
+        <div className="mt-5 col-span-12 md:col-span-6 lg:col-span-3">
+          <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
+            <CountUp isCounting start={0} end={100} duration={13} />
+          </h1>
+          <p className="lg:font-medium lg:text-base">MENUS/DISH</p>
         </div>
-        <div>
-          <div className="mt-5">
-            <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
-              <CountUp isCounting start={0} end={50} duration={13} />
-            </h1>
-            <p className="lg:font-medium lg:text-base">STAFFS</p>
-          </div>
+
+        <div className="mt-5 col-span-12 md:col-span-6 lg:col-span-3">
+          <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
+            <CountUp isCounting start={0} end={50} duration={13} />
+          </h1>
+          <p className="lg:font-medium lg:text-base">STAFFS</p>
         </div>
-        <div>
-          <div className="mt-5">
-            <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
-              <CountUp isCounting start={5000} end={15000} duration={12} />
-            </h1>
-            <p className="lg:font-medium lg:text-base">HAPPY CUSTOMERS</p>
-          </div>
+
+        <div className="mt-5 col-span-12 md:col-span-6 lg:col-span-3">
+          <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
+            <CountUp isCounting start={5000} end={15000} duration={12} />
+          </h1>
+          <p className="lg:font-medium lg:text-base">HAPPY CUSTOMERS</p>
         </div>
       </div>
     </div>
