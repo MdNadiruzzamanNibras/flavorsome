@@ -32,7 +32,7 @@ const CountAll = () => {
 
       <div
         className="grid background-image  text-center
-         text-white grid-cols-12   mb-4 bg-red-500"
+         text-white grid-cols-12   mb-4 bg-red-600"
       >
         <div className=" mt-5 col-span-12 md:col-span-6 lg:col-span-3 ">
           <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
