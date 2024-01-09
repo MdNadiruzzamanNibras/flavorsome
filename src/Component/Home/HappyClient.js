@@ -1,7 +1,5 @@
 import React from "react";
 import { HiOutlineMinus } from "react-icons/hi";
-import man_one from "../../../public/images/avatar/images.jpg";
-import man_tw from "../../../public/images/avatar/image_2.jpg";
 
 import Image from "next/image";
 const HappyClient = ({ reviews }) => {
@@ -18,7 +16,8 @@ const HappyClient = ({ reviews }) => {
             {reversereviews.slice(0, 3).map((review) => (
               <div
                 key={review._id}
-                className="card  md:mx-auto lg:mx-0 md:my-7 w-96 h-64 flex items-center bg-deepIndigo py-3 px-4  shadow-xl"
+                className="card  md:mx-auto lg:mx-0 md:my-7 
+                 md:w-96 h-64 flex items-center bg-deepIndigo py-3 px-4  shadow-xl"
               >
                 <div className="avatar my-2">
                   <div className="w-16 rounded-full">

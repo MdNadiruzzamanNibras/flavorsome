@@ -52,8 +52,8 @@ const Home = ({ menuData, reviews }) => {
 
         <BookTable></BookTable>
         <Master_Chef></Master_Chef>
-        {/* <HappyClient reviews={reviews}></HappyClient>
-        <RecentPost></RecentPost> */}
+        <HappyClient reviews={reviews}></HappyClient>
+        <RecentPost></RecentPost>
         {/* </div> */}
       </div>
     </div>
