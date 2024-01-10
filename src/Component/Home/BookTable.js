@@ -7,9 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 import process from "../../../public/images/book/Process-bg.png";
 import note from "../../../public/images/book/note.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 const BookTable = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [user] = useAuthState(auth);
+  const router = useRouter();
   useEffect(() => {
     const today = new Date();
     const futureDate = new Date();
@@ -49,6 +52,9 @@ const BookTable = () => {
           toast.error("Oh no try again later");
         }
       });
+  };
+  const handleNavigate = () => {
+    router.push("/login");
   };
   return (
     <div>
@@ -136,14 +142,25 @@ const BookTable = () => {
                     </select>
                   </div>
                 </div>
-                <div className="flex justify-center lg:flex-none my-2 lg:my-0">
-                  <button
-                    className="border-2 md:text-xl border-deepIndigo lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5 hover:bg-indigo-900  bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
-                    type="submit"
-                  >
-                    Book A Table
-                  </button>
-                </div>
+                {user ? (
+                  <div className="flex justify-center lg:flex-none my-2 lg:my-0">
+                    <button
+                      className="border-2 md:text-xl border-deepIndigo lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5 hover:bg-indigo-900  bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
+                      type="submit"
+                    >
+                      Book A Table
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex justify-center lg:flex-none my-2 lg:my-0">
+                    <button
+                      className="border-2 md:text-xl border-deepIndigo lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5 hover:bg-indigo-900  bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
+                      onClick={handleNavigate}
+                    >
+                      Book A Table
+                    </button>
+                  </div>
+                )}
                 <ToastContainer />
               </form>
             </div>
