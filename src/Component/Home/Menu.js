@@ -1,7 +1,11 @@
+import auth from "@/firebase/firebase.config";
 import Image from "next/image";
 import Link from "next/link";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Menu = ({ menuData }) => {
+  const [user] = useAuthState(auth);
+
   const reverseMenu = menuData.reverse();
   return (
     <div className="container mx-auto">
@@ -43,13 +47,23 @@ const Menu = ({ menuData }) => {
                   </div>
 
                   <div className="flex-none">
-                    <div className="lg:ml-0 flex justify-center mb-2 mt-auto md:ml-16">
-                      <Link href={`food/${food?._id}`}>
-                        <button className="bg-deepIndigo rounded-md text-white py-2 px-5 mt-3 ml-3 font-bold">
-                          Order Now
-                        </button>
-                      </Link>
-                    </div>
+                    {user ? (
+                      <div className="lg:ml-0 flex justify-center mb-2 mt-auto md:ml-16">
+                        <Link href={`food/${food?._id}`}>
+                          <button className="bg-deepIndigo rounded-md text-white py-2 px-5 mt-3 ml-3 font-bold">
+                            Order Now
+                          </button>
+                        </Link>
+                      </div>
+                    ) : (
+                      <div className="lg:ml-0 flex justify-center mb-2 mt-auto md:ml-16">
+                        <Link href="/login">
+                          <button className="bg-deepIndigo rounded-md text-white py-2 px-5 mt-3 ml-3 font-bold">
+                            Order Now
+                          </button>
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
