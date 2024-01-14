@@ -77,7 +77,7 @@ const BookTable = () => {
               <h1 className="text-center text-2xl md:text-3 lg:text-4xl md:mb-8 lg:mt-4 text-white font-bold">
                 Book Table
               </h1>
-              <form onSubmit={handleBook} className="     lg:my-7 ">
+              <form className=" lg:my-7 ">
                 <div className=" md:ml-20 lg:ml-0 md:grid md:grid-cols-2 lg:grid-cols-1">
                   <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                     <input
@@ -145,6 +145,7 @@ const BookTable = () => {
                 {user ? (
                   <div className="flex justify-center lg:flex-none my-2 lg:my-0">
                     <button
+                      onClick={handleBook}
                       className="border-2 md:text-xl border-deepIndigo lg:text-2xl lg:font-bold font-medium text-white lg:w-[530px] lg:h-20 my-5 hover:bg-indigo-900  bg-deepIndigo text-center rounded-lg px-2 text-lg lg:px-5 lg:py-2 focus:outline-none"
                       type="submit"
                     >
