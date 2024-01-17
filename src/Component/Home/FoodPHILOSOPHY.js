@@ -5,7 +5,7 @@ import first from "../../../public/images/philosphy/down.jpg";
 const FoodPHILOSOPHY = () => {
   return (
     <div className="container mx-auto">
-      <div className="mt-80 lg:mt-24">
+      <div className=" lg:mt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2  gap-2">
           <div className="lg:ml-72 md:ml-16">
             <Image

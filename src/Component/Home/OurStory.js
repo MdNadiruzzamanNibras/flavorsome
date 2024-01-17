@@ -1,7 +1,7 @@
 const OurStory = () => {
   return (
     <div className="container mx-auto">
-      <div className="flex justify-center h-56">
+      <div className="flex justify-center ">
         <div>
           <h1 className="lg:text-4xl text-2xl text-center font-bold">
             Our Story

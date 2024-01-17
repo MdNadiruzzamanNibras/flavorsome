@@ -27,7 +27,7 @@ const CountAll = () => {
 
       {/* className="absolute z-10 mt-[-500px] lg:mt-[-200px]" */}
 
-      <div className="absolute  mt-[-500px] ml-10 lg:mt-[-200px]">
+      <div className="absolute ml-20  mt-[-500px] lg:ml-10 lg:mt-[-200px]">
         <div
           className="grid  text-center
          text-white grid-cols-12   mb-4 "

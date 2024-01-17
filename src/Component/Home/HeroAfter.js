@@ -19,7 +19,7 @@ const HeroAfter = () => {
           />
         </div>
         <div className="flex justify-center ">
-          <div className="px-4 md:px-0">
+          <div className="ml-10 md:px-0">
             {/* <h2>about</h2> */}
             <h1 className="font-bold text-3xl lg:text-5xl md:text-2xl lg:mt-20 ">
               Flavorsome <br /> Restaurant
