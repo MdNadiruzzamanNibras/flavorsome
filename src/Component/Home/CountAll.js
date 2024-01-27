@@ -28,12 +28,12 @@ const CountAll = () => {
       {/* className="absolute z-10 mt-[-500px] lg:mt-[-200px]" */}
 
       <div
-        style={{
-          backgroundImage: url(${'../../../public/images/couter/Process-bg.png'}),
-          width: "100%",
-          height: "100%",
-        }}
-        className=""
+        // style={{
+        //   backgroundImage: url(count),
+        //   width: "100%",
+        //   height: "100%",
+        // }}
+        className="absolute ml-20 md:ml-0  mt-[-500px] md:mt-[-300px]  lg:mt-[-200px]"
       >
         <div
           className="grid  text-center
