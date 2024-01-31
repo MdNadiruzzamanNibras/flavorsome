@@ -1,5 +1,5 @@
-import auth from "@/firebase/firebase.config";
 import { signOut } from "firebase/auth";
+import auth from "@/firebase/firebase.config";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";

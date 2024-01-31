@@ -6,38 +6,17 @@ const CountAll = () => {
   const counterName = [{}];
   return (
     <div className="container mx-auto mb-12">
-      <div className="relative ">
-        {/* <Image
-          alt="Mountains"
-          src={count}
-          placeholder="blur"
-          quality={100}
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-          }}
-        /> */}
-        <Image
-          src={count}
-          alt=""
-          className="w-full  relative h-[500px] lg:h-72"
-        />
-      </div>
-
       {/* className="absolute z-10 mt-[-500px] lg:mt-[-200px]" */}
 
       <div
-        // style={{
-        //   backgroundImage: url(count),
-        //   width: "100%",
-        //   height: "100%",
-        // }}
-        className="absolute ml-20 md:ml-0  mt-[-500px] md:mt-[-300px]  lg:mt-[-200px]"
+        className="w-full h-56"
+        style={{
+          backgroundImage: `url(${"https://i.ibb.co/FbWdqHt/Process-bg.webp"})`,
+        }}
       >
         <div
           className="grid  text-center
-         text-white grid-cols-12   mb-4 "
+         text-white grid-cols-12 lg:pt-8  mb-4 "
         >
           <div className=" mt-5 col-span-12 text-center lg:px-14   md:col-span-3 ">
             <h1 className="text-6xl lg:text-8xl text-stone-300 font-bold">
