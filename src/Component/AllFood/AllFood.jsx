@@ -1,35 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import ReactPaginate from "react-paginate";
 
 const AllFood = ({ menuData }) => {
-  const [page, setpage] = useState(0);
+  const [page, setPage] = useState(0);
   const ITEMS_PER_PAGE = 6;
-  const handlePageClick = (selectedPage) => {
-    setpage(selectedPage.selected * ITEMS_PER_PAGE);
+
+  // Calculate the start and end index of the items for the current page
+  const startIndex = page * ITEMS_PER_PAGE;
+  const endIndex = (page + 1) * ITEMS_PER_PAGE;
+
+  // Slice the menuData array to get items for the current page
+  const paginatedData = menuData.slice(startIndex, endIndex);
+
+  const totalPages = Math.ceil(menuData.length / ITEMS_PER_PAGE);
+
+  const nextPage = () => {
+    setPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
   };
 
-  const paginatedData = menuData.slice(page, page + ITEMS_PER_PAGE);
+  const prevPage = () => {
+    setPage((prevPage) => Math.max(prevPage - 1, 0));
+  };
 
   return (
     <div className="container mx-auto my-20 px-2">
       <div>
         <div className="text-center my-20">
-          <h1 className="text-3xl font-bold   text-black"> Our Menu</h1>
+          <h1 className="text-3xl font-bold text-black"> Our Menu</h1>
         </div>
         <div className="grid md:ml-44 grid-cols-1 md:grid-cols-2 gap-5 ">
           {paginatedData.map((food) => (
             <div
               key={food._id}
-              className="  lg:flex lg:items-center rounded-lg hidden md:block w-80 mx-10 md:mx-0  border-2 lg:w-[520px]   my-5"
+              className="lg:flex lg:items-center rounded-lg hidden md:block w-80 mx-10 md:mx-0 border-2 lg:w-[520px] my-5"
             >
               <div className="">
                 <Image
                   width={1000}
                   height={1000}
                   src={food.image_url}
-                  className="w-80  lg:w-64 lg:h-64"
+                  className="w-80 lg:w-64 lg:h-64"
                   alt="menu"
                 />
               </div>
@@ -45,7 +56,7 @@ const AllFood = ({ menuData }) => {
                   </div>
 
                   <h4 className="text-lg mt-2 ">
-                    Meat, Potatoes, Rice, Tomatoe
+                    Meat, Potatoes, Rice, Tomato
                   </h4>
                 </div>
 
@@ -62,27 +73,22 @@ const AllFood = ({ menuData }) => {
             </div>
           ))}
         </div>
-      </div>
-      <div>
-        <ReactPaginate
-          className="flex justify-center mt-16 items-center text-white "
-          previousLabel={"Previous"}
-          nextLabel={"Next"}
-          breakLabel={"..."}
-          pageCount={Math.ceil(menuData.length / ITEMS_PER_PAGE)}
-          pageRangeDisplayed={5}
-          onPageChange={handlePageClick}
-          containerClassName="flex justify-center items-center"
-          pageClassName="mr-2"
-          pageLinkClassName="bg-deepIndigo  py-2 px-3 rounded-md"
-          activeClassName=" text-white  bg-deepIndigo  py-2 px-3 rounded-md"
-          previousClassName="mr-2"
-          previousLinkClassName="bg-deepIndigo  py-2 px-3 rounded-md"
-          nextClassName="mr-2"
-          nextLinkClassName="bg-deepIndigo  py-2 px-3 rounded-md"
-          breakClassName="mr-2"
-          breakLinkClassName="bg-deepIndigo  py-2 px-3 rounded-md"
-        />
+        <div className="flex justify-center mt-5">
+          <button
+            className="bg-deepIndigo mr-4 text-white font-bold py-2 px-4 rounded-l"
+            onClick={prevPage}
+            disabled={page === 0}
+          >
+            Prev
+          </button>
+          <button
+            className="bg-deepIndigo text-white ml-4 font-bold py-2 px-4 rounded-r"
+            onClick={nextPage}
+            disabled={page === totalPages - 1}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
