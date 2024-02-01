@@ -6,11 +6,9 @@ const AllFood = ({ menuData }) => {
   const [page, setPage] = useState(0);
   const ITEMS_PER_PAGE = 6;
 
-  // Calculate the start and end index of the items for the current page
   const startIndex = page * ITEMS_PER_PAGE;
   const endIndex = (page + 1) * ITEMS_PER_PAGE;
 
-  // Slice the menuData array to get items for the current page
   const paginatedData = menuData.slice(startIndex, endIndex);
 
   const totalPages = Math.ceil(menuData.length / ITEMS_PER_PAGE);
