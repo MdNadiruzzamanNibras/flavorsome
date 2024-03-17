@@ -44,36 +44,81 @@ const foodDetail = ({ food }) => {
       });
   };
   return (
+    // <div className="container mx-auto h-screen">
+    //   <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 my-20  pt-5 w-[450px] mx-auto bg-base-100 shadow-lg">
+    //     <div className="lg:flex lg:justify-end ">
+    //       <div className="h-64 w-64 ml-6">
+    //         <Image width={200} height={0} src={food.image_url} alt="food" />
+    //       </div>
+    //     </div>
+    //     <div className="w-40 ">
+    //       <h1 className=" text-2xl text-center"> {food?.title}</h1>
+
+    //       <form onSubmit={handleOrder}>
+    //         <input
+    //           type="number"
+    //           name="price"
+    //           className="border-2  focus:outline-none text-center"
+    //           readOnly
+    //           value={food.price}
+    //           id=""
+    //         />
+    //         <input
+    //           type="number"
+    //           name="qunatity"
+    //           className="border-2 my-4 focus:outline-none text-center"
+    //           placeholder="write quantity"
+    //           id=""
+    //         />
+    //         <div className="flex justify-center mt-4">
+    //           <button
+    //             type="submit"
+    //             className="bg-black text-white font-semibold  hover:bg-white hover:text-black hover:font-semibold px-4 py-2 rounded-lg border-black border-2"
+    //           >
+    //             Order
+    //           </button>
+    //         </div>
+    //       </form>
+    //     </div>
+    //     <ToastContainer />
+    //   </div>
+    // </div>
     <div className="container mx-auto h-screen">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 my-20  pt-5 w-[450px] mx-auto bg-base-100 shadow-lg">
-        <div className="lg:flex lg:justify-end ">
-          <div className="h-64 w-64 ml-6">
-            <Image width={200} height={0} src={food.image_url} alt="food" />
-          </div>
+      <div className="  my-20  pt-5 w-full lg:w-[400px] mx-auto bg-base-100 ">
+        <div className="w-full lg:w-[400px]  ">
+          <Image
+            width={1000}
+            height={1000}
+            className="w-full h-64"
+            src={food.image_url}
+            alt="food"
+          />
         </div>
-        <div className="w-40 ">
-          <h1 className=" text-2xl text-center"> {food?.title}</h1>
+        <div className=" ">
+          <h1 className=" text-2xl text-center my-5"> {food?.title}</h1>
 
           <form onSubmit={handleOrder}>
             <input
               type="number"
               name="price"
-              className="border-2  focus:outline-none text-center"
+              className="border-2 text-xl flex w-full focus:outline-none text-center"
               readOnly
               value={food.price}
               id=""
-            />
+            />{" "}
+            <br />
             <input
               type="number"
               name="qunatity"
-              className="border-2 my-4 focus:outline-none text-center"
+              required
+              className="border-2 text-xl w-full my-4 focus:outline-none text-center"
               placeholder="write quantity"
               id=""
             />
             <div className="flex justify-center mt-4">
               <button
                 type="submit"
-                className="bg-black text-white font-semibold  hover:bg-white hover:text-black hover:font-semibold px-4 py-2 rounded-lg border-black border-2"
+                className="bg-black text-white font-semibold  hover:bg-white hover:text-black hover:font-semibold w-full py-2 text-lg rounded-lg border-black border-2"
               >
                 Order
               </button>
